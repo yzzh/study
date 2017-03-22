@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>spec export</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="index.css" rel="stylesheet">
+</head>
+
+<body>
+    <form id="form" method="post" class="form-area">
+        <p class="form-des">选择已有病人</p>
+        <ul class="patient-list">
+            <li>李洋</li>
+            <li>刘胡兰</li>
+            <li>黄晓明</li>
+            <li id="add">增加就诊人</li>
+        </ul>
+
+        <ul class="form-list">
+            <li>
+                <div class="form-title">姓名</div>
+                <div class="form-control">
+                    <input type="text" class="input" name="name" placeholder="请输入姓名" maxlength="10" />
+                </div>
+            </li>
+            <li>
+                <div class="form-title">性别</div>
+                <div class="form-control">
+                    <label class="input-radio-area">
+                        <input type="radio" class="input-radio" name="sex" value="1"/>
+                        <span>男</span>
+                    </label>
+                    <label class="input-radio-area">
+                        <input type="radio" class="input-radio" name="sex" value="0"/>
+                        <span>女</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-title">年龄</div>
+                <div class="form-control">
+                    <input type="tel" class="input" name="age" placeholder="请输入年龄" maxlength="3" />
+                </div>
+            </li>
+            <li>
+                <div class="form-title">手机</div>
+                <div class="form-control">
+                    <input type="tel" class="input" name="phone" placeholder="请输入手机" maxlength="11" />
+                </div>
+            </li>
+        </ul>
+        <p class="mess">此信息严格保密，仅本人与医生可见</p>
+        <div class="m-group">
+            <h3 class="m-group-title form-title">病情描述</h3>
+            <div class="m-group-content">
+                <textarea name="des" class="form-textarea" placeholder="尽可能详尽描述病情，以便获得医生诊疗回复"></textarea>
+            </div>
+        </div>
+        <div class="m-group">
+            <h3 class="m-group-title form-title">上传病历报告图片</h3>
+            <div class="m-group-content">
+                <div class="file-a">
+                    <input class="file-b" type="file" name="file">
+                </div>
+            </div>
+            <p class="m-group-des">拍摄病历封面病案号及病位检查报告，方便医生确认病症。</p>
+        </div>
+        <div class="btn-group">
+            <button type="submit" class="btn btn-active">加入医生回访</button>
+        </div>
+    </form>
+</body>
+
+</html>
