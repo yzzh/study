@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>spec</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="index1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <form method="post" id="form">
+        <p class="form-list">选择已有病人</p>
+        <div>
+
+            <ul class="patient-list">
+                <li>李洋</li>
+                <li>刘胡兰</li>
+                <li>黄晓明</li>
+            </ul>
+            <p class="patient-add">增加就诊人</p>
+        </div>
+        <ul>
+            <li>
+                <div class="form-list"> 姓名
+                    <input type="text" name="name" class="input" placeholder="请输入姓名">
+                </div>
+            </li>
+            <li>
+                <div class="form-list"> 性别
+                    <label>
+                    <input type="radio" name="sex" class="sex" value="1">
+                    <span>男</span>
+                    </label>
+                    <label>
+                    <input type="radio" name="sex" class="sex" value="0">
+                    <span>女</span>
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-list"> 年龄
+                    <input type="tel" name="age" class="input" placeholder="请输入年龄">
+                </div>
+            </li>
+            <li>
+                <div class="form-list"> 手机
+                    <input type="tel" name="phone" class="input" placeholder="便于医生回访联系您（必填）">
+                </div>
+            </li>
+        </ul>
+        <p class="mess">
+            此信息严格保密，仅医生与本人可见
+        </p>
+        <div>
+            <p class="form-list">病情描述</p>
+            <textarea name="illness" class="illness" placeholder="请尽可能详尽描述病情，以便获得医生诊疗回复"></textarea>
+        </div>
+
+        <p class="form-list">上传病历报告图片</p>
+        <div class="file">
+            <input type="file" name="photo" class="photo">
+        </div>
+        <p class="photo-add">
+            拍摄病历封面病案号及病位检查报告，方便医生确认病症。
+        </p>
+        <div class="form-button">
+            <input type="submit" value="加入医生回访" class="button">
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+html,
+body,
+form,
+p,
+ul,
+input,
+div {
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    font-size: 20px;
+    margin: 0.9em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.form-list {
+    font-size: 0.8em;
+    font-family: PingFangSC-Regular, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1em;
+    vertical-align: bottom;
+    margin-bottom: 1.25em;
+}
+
+.patient-list {
+    padding-top: 0.75em;
+    padding-bottom: 0.5em;
+}
+
+.patient-list li {
+    display: inline;
+    font-size: 0.7em;
+    color: #666666;
+    line-height: 0.7em;
+    border: thin solid #cccccc;
+    border-radius: 0.2em;
+    padding: 0.45em 0.8em;
+}
+
+.patient-add {
+    border: 0.025em solid #508ced;
+    border-radius: 0.2em;
+    width: 7em;
+    margin-bottom: 1.15em;
+    font-size: 0.75em;
+    color: #508ced;
+    line-height: 1.05em;
+    padding: 0.375em;
+}
+
+.form-list .input {
+    background-color: transparent;
+    border: none;
+    font-size: 0.8em;
+    border-bottom: 1px solid #d7d7d7;
+    color: #3d3d3d;
+    text-indent: 2.6em;
+    height: 1.125em;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.sex {
+    margin-right: 0.6em;
+}
+
+.sex:focus+span {
+    color: #508ced;
+}
+
+.mess {
+    font-size: 0.65em;
+    color: #f93c3c;
+    margin-top: 0.75em;
+    margin-bottom: 1em;
+}
+
+.illness {
+    border: 0.05em solid #cccccc;
+    border-radius: 0.2em;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 5.975em;
+    resize: none;
+    padding: 0.3em;
+    margin-bottom: 1em;
+    line-height: 1em;
+    box-sizing: border-box;
+}
+
+.file {
+    border: dotted 1px #cccccc;
+    width: 4em;
+    height: 4em;
+    border-radius: 0.2em;
+    margin-top: 0.6em;
+    margin-bottom: 0.4em;
+}
+
+.photo {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.photo-add {
+    font-size: 0.6em;
+    color: #999999;
+}
+
+.form-button {
+    background-color: #508ced;
+    text-align: center;
+    width: 16.35em;
+    height: 2.2em;
+    margin-top: 2.675em;
+    padding-top: 0.45em;
+    border-radius: 0.2rem;
+}
+
+.button {
+    background-color: #508ced;
+    font-size: 0.9em;
+    color: #ffffff;
+    border: none;
+    vertical-align: bottom;
+}
