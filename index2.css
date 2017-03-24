@@ -1,0 +1,164 @@
+html,
+form,
+body,
+p,
+ul,
+li,
+div,
+textarea,
+input {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+#form {
+    padding: 0 0.6rem;
+    background-color: #ffffff;
+    font-family: PingFangSC-Regular, sans-serif;
+}
+
+.patient-choice {
+    font-size: 0.8rem;
+    color: #333333;
+    line-height: 1.6rem;
+    padding-bottom: 0.75rem;
+}
+
+.patient-list-choice {
+    border: 1px solid #cccccc;
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #666666;
+    padding: 0.45rem 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.patient-add {
+    border: 1px solid #508ced;
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #508ced;
+    padding: 0.45rem 0.8rem;
+    margin-top: 1rem;
+    width: 7rem;
+    text-align: center;
+}
+
+.form-list {
+    list-style: none;
+    line-height: 1.1rem;
+}
+
+.form-list li {
+    padding-top: 1.25rem;
+}
+
+.form-title {
+    float: left;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    height: 1.1rem;
+}
+
+.list {
+    margin-left: 2.2rem;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    text-indent: 2.5rem;
+    outline: none;
+    vertical-align: top;
+    font-size: 0.8rem;
+    height: 1.05rem;
+}
+
+.sex-list {
+    font-size: 0.9rem;
+    color: #666666;
+    margin-right: 2.2rem;
+    vertical-align: bottom;
+    display: inline-block;
+    line-height: 1.1rem;
+}
+
+.sex-list span {
+    display: inline-block;
+}
+
+.sex:focus+span {
+    color: #508ced;
+}
+
+.mess-a {
+    color: #f93c3c;
+    font-size: 0.65rem;
+}
+
+.discribe {
+    color: #3d3d3d;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+}
+
+.textarea {
+    background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    border-radius: 0.2rem;
+    width: 100%;
+    height: 5.975rem;
+    resize: none;
+    font-size: 0.7rem;
+    padding: 0.3rem;
+    vertical-align: top;
+    color: #999999;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+}
+
+.photo-border {
+    border: 0.05rem dotted #cccccc;
+    border-radius: 0.2rem;
+    width: 3.9rem;
+    height: 3.9rem;
+}
+
+.photo {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mess-b {
+    font-size: 0.6rem;
+    color: #999999;
+    margin-top: 0.2rem;
+}
+
+.submit {
+    padding: 2.675rem 1.2rem 1.8rem 1.2rem;
+}
+
+.submit-active {
+    background-color: #508ced;
+    width: 100%;
+    height: 2.2rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+::-webkit-input-placeholder {
+    font-size: 0.8rem;
+    color: #d7d7d7;
+}
