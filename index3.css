@@ -1,0 +1,262 @@
+html,
+body,
+form,
+p,
+div,
+input,
+label,
+ul,
+li,
+textarea {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+#form {
+    margin: 0.9rem 0.6rem;
+}
+
+li {
+    list-style: none;
+}
+
+.head {
+    font-size: 0.8rem;
+    color: #333333;
+    line-height: 0.8rem;
+}
+
+.patient-list {
+    font-size: 0;
+}
+
+.patient-list li {
+    border: solid 1px #cccccc;
+    border-radius: 0.2rem;
+    display: inline-block;
+    padding: 0.45rem 0.8rem;
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    color: #666666;
+    margin-top: 0.75rem;
+}
+
+.patient-list li.patient-add {
+    border-color: #508ced;
+    color: #508ced;
+}
+
+.form-table {
+    display: table;
+    width: 100%;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-row p {
+    display: table-cell;
+    padding-top: 1.25rem;
+}
+
+.table-row p:first-child {
+    font-size: 0.8rem;
+    line-height: 1.125rem;
+    color: #000000;
+    width: 1.6rem;
+}
+
+.table-row p:last-child input[type="text"],
+.table-row p:last-child input[type="tel"] {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    text-indent: 2.2rem;
+}
+
+
+/*该选择器为选择class=table-row中最后一个p元素中所有input类型为text和tel的元素*/
+
+.sex-list {
+    margin-left: 2.2rem;
+}
+
+.table-row .sex-control:focus+span {
+    color: #508ced;
+}
+
+.table-row .sex-list span {
+    font-size: 0.9rem;
+}
+
+
+/*子孙选择器，该处不可写作.sex-control span，因为后两者为兄弟元素*/
+
+::-webkit-input-placeholder {
+    font-size: 0.8rem;
+    color: #d7d7d7;
+}
+
+.mess-a {
+    color: #f93c3c;
+    font-size: 0.65rem;
+    padding-top: 0.6rem;
+}
+
+.des {
+    color: #3d3d3d;
+    font-size: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+}
+
+.textarea {
+    resize: none;
+    width: 100%;
+    height: 5.975rem;
+    background-color: #f2f2f2;
+    border: 1px solid #cccccc;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textarea::-webkit-input-placeholder {
+    color: #cccccc;
+}
+
+
+/*为class为textarea的placeholder内容设置样式*/
+
+.file-a {
+    border: 1px dotted #cccccc;
+    border-radius: 0.2rem;
+    width: 3.9rem;
+    height: 3.9rem;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    background-color: #cccccc;
+}
+
+.line-x {
+    left: 1.2rem;
+    top: 1.95rem;
+    width: 1.6rem;
+    height: 0.1rem;
+}
+
+.line-y {
+    top: 1.2rem;
+    left: 1.95rem;
+    height: 1.6rem;
+    width: 0.1rem;
+}
+
+.file-b {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mess-b {
+    font-size: 0.6rem;
+    color: #999999;
+    margin-top: 0.4rem;
+}
+
+.btn {
+    padding-top: 2.675rem;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.btn-active {
+    width: 100%;
+    background-color: #508ced;
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    height: 2.2rem;
+}
+
+.icon {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.text {
+    font-size: 0.75rem;
+    color: #3d3d3d;
+    line-height: 1.05rem;
+    text-align: center;
+    margin-top: 0.4rem;
+    margin-bottom: 0.7rem;
+}
+
+.btn-a {
+    text-align: center;
+}
+
+.btn-b {
+    background-color: #508ced;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+    width: 5.35rem;
+    height: 1.6rem;
+}
+
+.dialog {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.dialog-bg,
+.dialog-con {
+    position: absolute;
+}
+
+.dialog-bg {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.dialog-con {
+    top: 50%;
+    left: 50%;
+    margin-left: -6.75rem;
+    margin-top: -3.4rem;
+    border-radius: 0.65rem;
+    background-color: #fff;
+    width: 13.5rem;
+    height: 6.75rem;
+}

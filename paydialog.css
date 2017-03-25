@@ -1,0 +1,84 @@
+html,
+body,
+div,
+p,
+button {
+    padding: 0;
+    margin: 0;
+}
+
+.text {
+    width: 300pt;
+    height: 209.5pt;
+    margin-top: 9pt;
+    padding-top: 15pt;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 8pt;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*margin-left/right="auto"表示可以居中，左右外边距相等*/
+
+
+/*记住  text-align只能对内联元素起作用，所以可以将块元素改为内联元素或者“内联块元素”（display:inline-block即除了有内联元素的属性之外，还可以设置块元素才能设置的宽度和高度）*/
+
+.icon {
+    border-radius: 50%;
+    width: 22pt;
+    height: 22pt;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    background-color: lawngreen;
+    line-height: 22pt;
+}
+
+.text-a {
+    color: #3d3d3d;
+    line-height: 22.5pt;
+    margin-top: 10pt;
+    font-size: 16pt;
+}
+
+
+/*有文本的段落快元素一般不需要设置宽度和高度，文本可自适应。但一般都需要设置行高*/
+
+.text-b {
+    font-size: 15pt;
+    margin-top: 6pt;
+    color: #3d3d3d;
+    line-height: 21pt;
+}
+
+
+/*text:a.b.c三个段落都是块元素，但是其中包含的文本是内联元素，所以可以继承.text中text-align="center"的属性*/
+
+.text-c {
+    font-size: 15pt;
+    margin-top: 16pt;
+    color: #508ced;
+    line-height: 21pt;
+}
+
+.btn {
+    margin-top: 16pt;
+}
+
+.btn-active {
+    border: 1px solid #508ced;
+    border-radius: 4pt;
+    color: #508ced;
+    width: 144pt;
+    height: 44pt;
+    font-size: 15pt;
+    background-color: inherit;
+}
+
+
+/*button以及文本输入框本身即是内联块元素*/
+
+
+/*inherit为继承父元素属性*/

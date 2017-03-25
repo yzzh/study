@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>spex hxy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="index3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <form method="post" id="form">
+        <p class="head">
+            选择已有病人
+        </p>
+        <ul class="patient-list">
+            <li>李洋</li>
+            <li>刘胡兰</li>
+            <li>黄晓明</li>
+            <li class="patient-add">增加就诊人</li>
+        </ul>
+        <div class="form-table">
+            <div class="table-row">
+                <p>姓名</p>
+                <p>
+                    <input type="text" name="name" placeholder="请输入姓名" maxlength="10">
+                </p>
+            </div>
+            <div class="table-row">
+                <p>性别</p>
+                <p>
+                    <label class="sex-list">
+        <input type="radio" name="sex" value="1" class="sex-control">
+        <span>男</span>
+        </label>
+                    <label class="sex-list">
+        <input type="radio" name="sex" value="0" class="sex-control">
+        <span>女</span>
+        </label>
+                </p>
+            </div>
+            <div class="table-row">
+                <p>年龄</p>
+                <p>
+                    <input type="tel" name="age" placeholder="请输入年龄" maxlength="3">
+                </p>
+            </div>
+            <div class="table-row">
+                <p>手机</p>
+                <p>
+                    <input type="tel" name="tel" placeholder="便于医生回访联系您（必填）" maxlength="11">
+                </p>
+            </div>
+        </div>
+        <p class="mess-a">
+            此信息严格保密，仅本人于医生可见
+        </p>
+        <div class="form-list">
+            <p class="des">病情描述</p>
+            <textarea name="textarea" class="textarea" placeholder="请详细描述病情，以便医生参考"></textarea>
+        </div>
+        <div class="form-list">
+            <p class="des">上传病历报告图片</p>
+            <p class="file-a">
+                <span class="line line-x"></span>
+                <span class="line line-y"></span>
+                <input type="file" name="file" class="file-b">
+            </p>
+        </div>
+        <p class="mess-b">拍摄病历封面病案号及病位检查报告，方便医生确认病症。</p>
+        <div class="btn">
+            <button type="submit" name="submit" class="btn-active">加入医生回访</button>
+        </div>
+    </form>
+
+    <div class="dialog">
+        <div class="dialog-bg"></div>
+        <div class="dialog-con">
+            <p class="icon">
+                &radic;
+            </p>
+            /*设置对号*/
+            <p class="text">提交成功，医生已收到您的病情描述</p>
+            <p class="btn-a">
+                <button type="submit" class="btn-b" value="进入医生诊室">进入医生诊室</button>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
