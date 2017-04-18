@@ -1,0 +1,266 @@
+html,
+body,
+table,
+div,
+p,
+button,
+tr,
+td,
+th,
+h1,
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    height: 0;
+    padding-top: 14.3%;
+    background-color: antiquewhite;
+}
+
+.header-text {
+    position: absolute;
+    top: 0rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.header-img {
+    position: relative;
+    height: 34.1%;
+    top: 1.8%;
+}
+
+.header-text-a {
+    position: relative;
+    width: 100%;
+    top: 7.8%;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    font-weight: bold;
+    color: #333333;
+}
+
+.header-text-b {
+    position: relative;
+    width: 100%;
+    color: #666666;
+    top: 10.7%;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+}
+
+#table {
+    padding-left: 3.2%;
+    padding-right: 3.2%;
+}
+
+.caption {
+    padding-top: 0.3rem;
+}
+
+.caption-a {
+    border-left: 3px #508ced solid;
+    padding-left: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 0.8rem；
+}
+
+.table-a,
+.table-b {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.table-a th,
+.table-a td,
+.table-b th,
+.table-b td {
+    border: 1px solid #cccccc;
+    color: #3d3d3d;
+    font-size: 0.7rem;
+    line-height: 0.725rem;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.caption-b {
+    font-size: 0.7rem;
+    line-height: 0.725rem;
+    float: right;
+    padding-top: 0.5rem;
+    color: #666666;
+}
+
+.pay {
+    padding-top: 0.8rem;
+}
+
+.pay p {
+    display: inline-block;
+}
+
+.pay-icon {
+    border-radius: 50%;
+    background-color: darkgrey;
+    color: #508ced;
+    width: 0.7rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    display: inline-block;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+
+/*宽和高只对块元素有用，此处html中使用span为内联元素，所以需要使用display属性。*/
+
+.pay-text {
+    color: #3d3d3d;
+    font-size: 0.7rem;
+    line-height: 0.75rem;
+}
+
+.btn {
+    padding: 2rem 1.2rem 1rem 1.2rem;
+}
+
+.btn-active {
+    width: 100%;
+    border: 1px solid #508ced;
+    background-color: inherit;
+    border-radius: 0.2rem;
+    color: #508ced;
+    height: 2.2rem;
+    font-size: 0.9rem;
+}
+
+.confirm {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.confirm-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.confirm-con {
+    position: fixed;
+    background-color: white;
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+    height: 17.25rem;
+    text-align: center;
+    width: 17.55rem;
+    margin-left: -0.6rem;
+    margin-top: -8.05rem;
+    top: 50%;
+    left: 25%;
+}
+
+.icon-a {
+    float: right;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    font-size: 0.8rem;
+}
+
+.h1 {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    padding-top: 1.25rem;
+    color: #3d3d3d;
+}
+
+.h2 {
+    padding-top: 1.325rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #3d3d3d;
+    text-align: left;
+    margin-left: 1.675rem;
+}
+
+.text {
+    padding-top: 1.325rem;
+}
+
+.input {
+    border: 1px solid #508ced;
+    margin-left: 1.675rem;
+    margin-right: 1.675rem;
+    margin-bottom: 0.75rem;
+    border-radius: 2.5rem;
+}
+
+.input-text {
+    font-size: 0.8rem;
+    line-height: 1.125rem;
+    color: #3d3d3d;
+    text-align: left;
+    width: 3.2rem;
+    display: inline-block;
+}
+
+
+/*此处要想实现text和active类中分别向左对齐的效果，可将text元素定义display属性，并设置一个宽度，文本设置左对齐，*/
+
+.input-active {
+    border: none;
+    outline: none;
+    text-indent: 0.5rem;
+}
+
+
+/*outline(轮廓)是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用*/
+
+
+/*text-indent属性规定文本块中首行文本的缩进*/
+
+.input-active::webkit-input-placeholder {
+    color: #999999;
+    line-height: 1.125rem;
+    font-size: 0.8rem;
+}
+
+.btn-a {
+    padding-left: 1.675rem;
+    padding-right: 1.675rem;
+    padding-top: 0.75rem;
+}
+
+
+/*btn-a是包围button按钮的父元素，只需要设置上下左右边距，内部的active子元素设置其他属性即可*/
+
+.btn-a-active {
+    width: 100%;
+    border: none;
+    background-color: #508ced;
+    border-radius: 2.5rem;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    height: 2.2rem;
+}

@@ -1,0 +1,72 @@
+html,
+body,
+div,
+p,
+button {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+.text {
+    padding: 3% 3.7% 13.2% 3.7%;
+    text-align: center;
+    border-radius: 0.4rem;
+}
+
+.icon {
+    border-radius: 50%;
+    background-color: green;
+    margin-top: 6%;
+    width: 1.1rem;
+    height: 1.1rem;
+    display: inline-block;
+    color: white;
+    line-height: 1.1rem;
+    font-size: 0.8rem;
+}
+
+.text-a {
+    font-size: 0.8rem;
+    line-height: 1.125rem;
+    color: #3d3d3d;
+    padding-top: 4%;
+}
+
+.text-b {
+    font-size: 0.75rem;
+    line-height: 1.05rem;
+    color: #3d3d3d;
+    padding-top: 2.4%;
+}
+
+.btn-a {
+    padding-top: 6.4%;
+}
+
+.btn-a-active {
+    border: none;
+    background-color: inherit;
+    color: #508ced;
+    font-size: 0.75rem;
+    line-height: 1.05rem;
+}
+
+.btn-b {
+    padding-top: 6.4%;
+    padding-bottom: 6.4%;
+}
+
+.btn-b-active {
+    border: 1px solid #508ced;
+    color: #508ced;
+    background-color: inherit;
+    font-size: 0.75rem;
+    line-height: 1.05rem;
+    border-radius: 0.2rem;
+    width: 43.2%;
+    height: 17.6%;
+}

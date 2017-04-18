@@ -1,0 +1,226 @@
+html,
+body,
+p,
+table,
+div,
+caption,
+tr,
+td,
+th,
+button {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+.header {
+    background-color: navajowhite;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 6.45rem;
+}
+
+.header-text-a {
+    color: #333333;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    margin-top: 3.5rem;
+    font-weight: bold;
+    font-family: PingFangSC-Medium, sans-serif;
+}
+
+.header-text-b {
+    color: #666;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    margin-top: 0.5rem;
+    font-family: PingFangSC-regular, sans-serif;
+}
+
+#table {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    background-color: #ffffff;
+    border-radius: 0.2rem;
+}
+
+.table-header {
+    margin-top: 0.3rem;
+}
+
+.table-header p {
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.table-header-color {
+    border-radius: 2.5rem;
+    background-color: #508ced;
+    width: 0.15rem;
+    height: 0.7rem;
+}
+
+.caption-a {
+    color: #333;
+    font-size: 0.75rem;
+    line-height: 0.8rem;
+    font-family: PingFangSC-Medium, sans-serif;
+    font-weight: 600;
+}
+
+.table-a,
+.table-b {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 0.8rem;
+}
+
+
+/*两个class共用一个样式表的情况下，书写的时候，类名中间需加上一个逗号*/
+
+.table-a th,
+.table-a td,
+.table-b th,
+.table-b td {
+    border: 1px solid #cccccc;
+    color: #3d3d3d;
+    font-size: 0.7rem;
+    line-height: 0.725rem;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem
+}
+
+
+/*不可写作.table-a tr等，否则指向不明确因为tr中有th,td，他们都是块元素*/
+
+.caption-b {
+    color: #ff4949;
+    font-size: 0.7rem;
+    line-height: 0.725rem;
+    float: right;
+    margin-top: 0.6rem;
+    margin-right: 0rem;
+    font-size: PingFangSC-Medium, sans-serif;
+}
+
+
+/*此处用float元素将.caption-b浮动到右边，因为元素内容时文本，所以不需要设置宽度，设置一下元素的上右外边距即可。因为整个table已经设置了右外边距，所以此处右外边距设置为0即可。*/
+
+.ad {
+    margin-top: 2.1rem;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    color: #3d3d3d;
+    text-align: center;
+}
+
+#number {
+    color: #508ced;
+}
+
+.btn-a {
+    margin-top: 0.8rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+
+/*如果希望按钮随着浏览器窗口的大小无限延伸同时左右又能有边距，则应该在包围button的类中设置左右外边距或内边距*/
+
+.btn-a-active {
+    width: 100%;
+    background-color: #508ced;
+    border: none;
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    border-radius: 0.2rem;
+    height: 2.2rem;
+}
+
+.btn-b {
+    margin: 1.5rem 1.2rem 1.6rem 1.2rem;
+}
+
+.btn-b-active {
+    width: 100%;
+    color: #508ced;
+    border: 1px solid #508ced;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    border-radius: 0.2rem;
+    height: 2.2rem;
+    background-color: inherit;
+}
+
+.deal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: #ffffff;
+}
+
+.deal-bg,
+.deal-con {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.deal-con {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+.deal-bg {
+    background: #3d3d3d;
+    opacity: 0.8;
+}
+
+.img {
+    float: right;
+    width: 0.75rem;
+    height: 0.725rem;
+    margin-top: 1.025rem;
+    margin-right: 1.075rem;
+}
+
+.img-active {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    background-color: inherit;
+}
+
+.deal-h1 {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    text-align: center;
+    margin-top: 2.25rem;
+}
+
+.deal-h2 {
+    font-size: 0.8rem;
+    line-height: 1.125;
+    margin-top: 1rem;
+}
+
+.deal-main {
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+.deal-main p,
+.deal-main li {
+    padding: 0.5rem 0;
+}

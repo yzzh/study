@@ -1,0 +1,49 @@
+html,
+body,
+div,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+.pay {
+    text-align: center;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-top: 0.45rem;
+    border-radius: 0.4rem;
+    background-color: #fff
+}
+
+.icon {
+    display: inline-block;
+    border-radius: 50%;
+    width: 1.1rem;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    background-color: limegreen;
+    color: white;
+    margin-top: 0.75rem;
+}
+
+.h1 {
+    font-size: 0.8rem;
+    line-height: 1.125rem;
+    color: #3d3d3d;
+    padding-top: 0.5rem;
+}
+
+.des {
+    font-size: 0.7rem;
+    line-height: 1rem;
+    color: #3d3d3d;
+    padding-top: 1.125rem;
+}
+
+.des-a {
+    color: #508ced;
+}

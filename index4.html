@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>患者报到4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="index4.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <form id="form" method="post">
+        <p class="patient-choice">
+            选择已有病人
+        </p>
+        <ul class="patient-list">
+            <li>李洋</li>
+            <li>刘胡兰</li>
+            <li>黄晓明</li>
+        </ul>
+        <div class="patient-add">
+            <p class="icon">＋</p>
+            <p class="add-text">增加就诊人</p>
+        </div>
+        <ul class="for">
+            <li>
+                <span class="form-list">姓名</span>
+                <span>
+        <input class="form-control" type="text" name="name" placeholder="请输入姓名">
+           </span>
+            </li>
+            <li>
+                <span class="form-list">性别</span>
+                <span class="sex-list">
+                <lable class="sex-text">
+        <input class="form-control" type="radio" name="sex" value="1">
+        <span >男</span>
+                </lable>
+                <lable class="sex-text">
+                    <input class="form-control" type="radio" name="sex" value="0">
+                    <span>女</span>
+                </lable>
+                </span>
+            </li>
+            <li>
+                <span class="form-list">年龄</span>
+                <span>
+        <input class="form-control" type="tel" name="age" placeholder="请输入年龄">
+           </span>
+            </li>
+            <li>
+                <span class="form-list">手机</span>
+                <span>
+        <input class="form-control" type="tel" name="tel" placeholder="请输入手机">
+           </span>
+            </li>
+
+        </ul>
+        <p class="add-a">此信息严格保密，仅本人于医生可见</p>
+        <p class="des">病情描述</p>
+        <textarea class="textarea" name="text" placeholder="请尽可能详细描述病情，以便医生参考"></textarea>
+
+        <p class="des">上传病历报告图片</p>
+        <div class="photo-add">
+            <input class="photo-text" type="file" name="photo">
+        </div>
+        <p class="add-b">
+            拍摄病历封面病案号及病位检查报告，方便医生确认病症。
+        </p>
+        <div class="btn">
+            <button class="btn-control" type="submit">加入医生回访</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
