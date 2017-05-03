@@ -1,0 +1,865 @@
+html,
+body,
+div,
+ul,
+li,
+span,
+i,
+p,
+b,
+header,
+ol,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+em,
+a {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    color: #3c3c3c;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+}
+
+#container {
+    background-color: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color: #6c6c6c;
+}
+
+a:visited,
+a:hover {
+    color: #f50;
+    ;
+}
+
+.h {
+    color: #f22e00;
+}
+
+li {
+    list-style: none;
+}
+
+#header-cover {
+    background-color: #f5f5f5;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+#header {
+    width: 1190px;
+    height: 35px;
+    margin: 0 auto;
+    line-height: 35px;
+}
+
+#header ul>li {
+    display: inline-block;
+    padding: 0 6px;
+}
+
+#header a {
+    margin-right: 7px;
+    font-size: 12px;
+}
+
+#header a:visited,
+#header a:hover {
+    color: #f50;
+}
+
+.header-nav-a {
+    float: left;
+}
+
+.header-nav-b {
+    float: right;
+}
+
+.header-icon .icon-favorfill {
+    font-size: 12px;
+}
+
+.header-icon .icon-comment,
+.header-icon .icon-edit {
+    color: #f40;
+    font-size: 12px;
+}
+
+#cup-cover {
+    background-color: #fff;
+    width: 100%;
+}
+
+#cup {
+    width: 1190px;
+    height: 99px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.cup-logo-cover {
+    float: left;
+    width: 230px;
+    height: 80px;
+}
+
+.cup-logo {
+    background: url(https://img.alicdn.com/tps/i2/TB1bNE7LFXXXXaOXFXXwFSA1XXX-292-116.png_145x145.jpg) 0 0 no-repeat;
+    margin-left: 22px;
+    padding-top: 58px;
+    width: 142px;
+    height: 0;
+    margin-top: 10px;
+}
+
+.cup-logo h1 {
+    text-indent: -9999px;
+    margin-top: -20px;
+}
+
+.cup-middle-cover {
+    margin-left: 265px;
+    margin-right: 300px;
+}
+
+.cup-middle {
+    height: 90px;
+    position: relative;
+}
+
+.cup-nav {
+    height: 25px;
+}
+
+.cup-nav li {
+    float: left;
+    width: 50px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.cup-nav li:first-child {
+    color: #fff;
+    background-color: #ff5400;
+    font-weight: 700;
+}
+
+.cup-nav li:nth-child(2):hover,
+.cup-nav li:nth-child(3):hover {
+    background-color: #F9E6E6;
+    color: #C60000;
+}
+
+.cup-input-group {
+    position: relative;
+}
+
+.cup-search {
+    border: 3px solid #f40;
+    border-right: none;
+    box-sizing: border-box;
+    height: 40px;
+    width: 503px;
+    outline: none;
+    text-indent: 10px;
+}
+
+.cup-input-group i {
+    position: absolute;
+    top: 8px;
+    right: 130px;
+    font-style: normal;
+}
+
+.cup-button {
+    border: none;
+    background-color: #ff4200;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 40px;
+    width: 122px;
+    float: right;
+}
+
+.cup-input-add {
+    position: absolute;
+    top: 0px;
+    right: -34px;
+}
+
+.cup-bottom {
+    padding-top: 5px;
+    height: 20px;
+}
+
+.cup-bottom li {
+    display: inline-block;
+    padding-right: 4px;
+}
+
+.cup-bottom li:last-child {
+    float: right;
+}
+
+.cup-qr {
+    float: right;
+    width: 96px;
+    height: 114px;
+    margin-top: -90px;
+    border: 1px solid #eee;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cup-qr img {
+    width: 80px;
+}
+
+.nav-cover {
+    background-color: #fff;
+    padding-bottom: 1px;
+}
+
+.nav {
+    width: 990px;
+    margin: 0 auto;
+    padding-left: 200px;
+    height: 34px;
+}
+
+.nav ul {
+    height: 30px;
+    margin-top: 4px;
+    float: left;
+}
+
+.nav ul>li {
+    float: left;
+}
+
+.nav li:hover {
+    background-color: #F40;
+    border-radius: 13px;
+    color: #fff;
+}
+
+.nav li:hover a {
+    color: #fff;
+}
+
+
+/*此处需要达到li元素hover时a元素color为白色，由于a元素不继承父元素也就是此处的li元素的颜色，所以设置li:hover{color:#fff;}是无效的，需要另行设置li:hover a 的颜色*/
+
+.nav .nav-a li {
+    padding: 0 7px;
+    font-size: 16px;
+}
+
+.nav .nav-b li {
+    margin-left: 7px;
+    font-size: 14px;
+}
+
+.nav .nav-b .pipe {
+    padding-top: 2px;
+    font-weight: 400;
+    margin-left: 6px;
+    color: #ddd;
+}
+
+.nav-a a,
+.nav-b a {
+    line-height: 28px;
+    padding: 0 5px;
+    font-weight: 700;
+}
+
+.nav .nav-a a {
+    color: #f40;
+}
+
+
+/*同理，此处需要nav-a的三个元素颜色为#f40，则需要在a元素本身设置颜色，而不能在li上设置，因为a不继承父元素的颜色大小等（或者在a的父元素设置颜色后，在a中设置color:inherit）*/
+
+#mian-content {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+#main {
+    width: 1190px;
+    height: 598px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#main-float-left {
+    width: 900px;
+    float: left;
+    height: 100%;
+    position: relative;
+}
+
+#main-right {
+    width: 290px;
+    height: 100%;
+    margin-left: 900px;
+}
+
+.main-left-cover {
+    width: 190px;
+    height: 555px;
+    float: left;
+    margin-top: -44px;
+    background-color: #ff6537;
+    color: #fff;
+}
+
+.main-left {
+    padding: 0 10px;
+    height: 515px;
+}
+
+.main-left a {
+    color: #fff;
+}
+
+.main-left-p a {
+    font-weight: 700;
+}
+
+.main-h3 {
+    height: 33px;
+    line-height: 33px;
+    position: relative;
+}
+
+.main-h3 h3 {
+    font-size: 14px;
+}
+
+.main-h3 i {
+    position: absolute;
+    right: -2px;
+    top: 0px;
+}
+
+.main-left-p p {
+    font-size: 13px;
+    line-height: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.main-left-p p>i {
+    width: 18px;
+    font-size: 18px;
+    color: #ff9058;
+    vertical-align: middle;
+}
+
+.main-left-p p>span {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.main-left-img {
+    height: 40px;
+}
+
+.main-middle-cover {
+    margin-left: 200px;
+    margin-right: 10px;
+}
+
+.main-middle {
+    height: 511px;
+}
+
+.photo-group-left {
+    float: left;
+    width: 520px;
+}
+
+.main-photo-1,
+.main-photo-2 {
+    height: 280px;
+}
+
+.main-photo-3,
+.main-photo-4 {
+    height: 201px;
+}
+
+.main-photo-1,
+.main-photo-3 {
+    position: relative;
+    background-color: #fff;
+}
+
+.ul {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 10px;
+    margin-left: -39px;
+}
+
+.ul li {
+    float: left;
+    margin: 2px;
+    text-indent: -9999px;
+    background-color: #b7b7b7;
+    width: 9px;
+    border-radius: 50%;
+    height: 9px;
+}
+
+.photo-add {
+    height: 28px;
+    border-bottom: 2px solid #c12c26;
+    position: relative;
+    background-color: #fff;
+}
+
+.photo-add-a {
+    background: url(https://g.alicdn.com/s.gif) -4px bottom no-repeat;
+    padding-left: 48px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    display: inline;
+    position: relative;
+    bottom: -2px;
+    border-bottom: 2px solid #000;
+}
+
+.photo-add-b {
+    position: absolute;
+    bottom: 0px;
+    left: 123px;
+    font-style: normal;
+}
+
+.photo-add-c {
+    float: right;
+    margin-top: 11px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.photo-add-c i {
+    font-style: normal;
+    color: #c12c26;
+}
+
+.main-photo-3 {
+    position: relative;
+    background-color: #fff;
+    padding: 6px 6px 0 6px;
+    box-sizing: border-box;
+}
+
+.main-photo-3 span>img {
+    width: 251px;
+    height: 190px;
+}
+
+.photo-group-right {
+    margin-left: 530px;
+}
+
+.photo-add-d {
+    height: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #a1a1a1;
+    line-height: 37px;
+}
+
+.sidebar-a-cover {
+    background-image: url(https:data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkQAAAFUCAMAAADyANNuAAAAQlBMV…qqqqqqqirtwQEJAAAAgKD/r9sRqAAAAAAAAAAAAAAAAMBIfDmj3Ij2F4sAAAAASUVORK5CYII=);
+    background-position: 0 0;
+    background-size: 290px 168px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
+.sidebar-a {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    width: 268px;
+    height: 137px;
+}
+
+.sidebar-a img {
+    border-radius: 50%;
+}
+
+.sidebar-a h6 {
+    margin-top: -2px;
+    margin-bottom: 2px;
+    color: #3c3c3c;
+}
+
+.button-group button:first-child {
+    border: none;
+    border-radius: 1px;
+    background-color: #ff6f06;
+    color: #fff;
+    width: 92px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    float: left;
+    margin-right: 7px;
+    outline: none;
+    text-align: center;
+}
+
+.button-group button:nth-child(2),
+.button-group button:nth-child(3) {
+    border: none;
+    border-radius: 1px;
+    background-color: #ff6f06;
+    color: #fff;
+    width: 75px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    float: left;
+    margin-right: 7px;
+    outline: none;
+    text-align: center;
+}
+
+.sidebar-b {
+    height: 98px;
+    margin-top: 1px;
+    padding-top: 7px;
+    padding-bottom: 4px;
+    width: 290px;
+    background-color: #fff;
+}
+
+.sidebar-b-nav {
+    height: 24px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+    margin-right: -2px;
+    padding: 0 8px;
+}
+
+.sidebar-b-nav li {
+    float: left;
+    line-height: 22px;
+    width: 39px;
+    text-align: center;
+    margin: 0 8px;
+}
+
+.sidebar-p {
+    height: 60px;
+    margin: 10px;
+}
+
+.sidebar-c {
+    background-color: #fff;
+    border-top: 1px solid #eaeaea;
+    height: 200px;
+    overflow: hidden;
+}
+
+.sidebar-c ul>li {
+    width: 72px;
+    height: 69px;
+    float: left;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    text-align: center;
+}
+
+.list-style {
+    background: url(https://img.alicdn.com/tfs/TB1vQzVOVXXXXX4XpXXXXXXXXXX-220-1170.png) 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-top: 11px;
+    margin-left: 22px;
+}
+
+.sidebar-d {
+    height: 110px;
+    padding: 6px 0 0 13px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.sidebar-d .span-a {
+    position: relative;
+    height: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sidebar-d .span-b {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    font-weight: 0;
+}
+
+.app-group {
+    padding-top: 6px;
+}
+
+.app-group li {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-bottom: 8px;
+    margin-right: 21px;
+}
+
+.app-group li>img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-bottom {
+    width: 890px;
+    height: 76px;
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+}
+
+.main-bottom-text {
+    width: 178px;
+    height: 74px;
+    float: left;
+}
+
+.main-bottom-text img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #ededed;
+    float: left;
+    margin: 8px 8px 0 10px;
+}
+
+.bottom-img-text {
+    padding-top: 6px;
+}
+
+.bottom-img-text p:first-child {
+    font-size: 16px;
+    height: 24px;
+    font-weight: bold;
+}
+
+.bottom-img-text p:nth-child(2) {
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+.bottom-img-text p:last-child {
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #999;
+    margin-top: 6px;
+}
+
+.color-1 {
+    color: #9a745f;
+}
+
+.color-2 {
+    color: #81c18f;
+}
+
+.color-3 {
+    color: #72a5f6;
+}
+
+.color-4 {
+    color: #846fc7;
+}
+
+.color-5 {
+    color: #de525e;
+}
+
+.section {
+    height: 2717px;
+}
+
+.section-left {
+    width: 890px;
+    height: 2717px;
+    float: left;
+}
+
+.h2-hidden {
+    margin-top: 15px;
+    height: 33px;
+    background: url(https://img.alicdn.com/tfs/TB1vQzVOVXXXXX4XpXXXXXXXXXX-220-1170.png) 0 0 no-repeat;
+    background-position: center -604px;
+    position: relative;
+}
+
+.h2-hidden em {
+    text-indent: -9999px;
+    display: block;
+}
+
+.h2-hidden a {
+    position: absolute;
+    right: 12px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 9px 0 14px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.section-a-1-contain {
+    width: 440px;
+    height: 362px;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.section-sidebar {
+    width: 100px;
+    float: left;
+}
+
+.section-sidebar-logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+.section-sidebar-nav {
+    height: 262px;
+    background-color: pink;
+    color: #fff;
+}
+
+.section-sidebar-nav strong {
+    text-indent: 8px;
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.section-sidebar-nav div {
+    height: 127px;
+}
+
+.section-sidebar-nav div>a {
+    display: block;
+    height: 19px;
+    line-height: 19px;
+    padding: 0 8px;
+    margin-bottom: 3px;
+    color: #fff;
+}
+
+.section-text {
+    margin-left: 100px;
+    height: 100%;
+}
+
+.section-text-top {
+    width: 340px;
+    height: 202px;
+}
+
+.section-text .section-text-top a {
+    float: left;
+    width: 101px;
+    height: 205px;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.section-text-top-b {
+    margin-left: 202px;
+    width: 138px;
+    height: 202px;
+}
+
+.section-text .section-text-top-b a {
+    width: 139px;
+    height: 102px;
+    border-bottom: 1px solid #eee;
+}
+
+.section-text-bottom {
+    height: 160px;
+}
+
+.section-text-bottom a {
+    width: 201px;
+    height: 140px;
+    float: left;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid #eee;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.section-text-bottom-add {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.section-text-bottom-right {
+    margin-left: 201px;
+    width: 140px;
+    height: 162px;
+}
+
+.section-text-bottom-right a {
+    width: 136px;
+    height: 81px;
+    display: block;
+}
