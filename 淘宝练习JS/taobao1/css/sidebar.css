@@ -1,0 +1,347 @@
+#sidebar {
+    width: 290px;
+    margin-left: 900px;
+}
+
+.discover-1 {
+    min-height: 0;
+    background-color: #fff;
+    height: 90px;
+    padding: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.discover-title {
+    background: url(https://img.alicdn.com/tfs/TB1vQzVOVXXXXX4XpXXXXXXXXXX-220-1170.png) 0 0 no-repeat;
+    position: relative;
+    height: 18px;
+}
+
+.discover-title a {
+    position: absolute;
+    right: 4px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.discover-1-title {
+    background-position: 0 -769px;
+}
+
+.headtext {
+    height: 60px;
+    margin-top: 12px;
+    width: 270px;
+    position: relative;
+    overflow: hidden;
+}
+
+.headlist {
+    position: absolute;
+    top: 0;
+    height: 180px;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    /*transform: translate3d(0px, -60px, 0px);*/
+    backface-visibility: hidden;
+    opacity: 1;
+}
+
+.headlist-1 {
+    float: none;
+    overflow: hidden;
+    height: 60px;
+    display: block;
+    width: 270px;
+}
+
+.headlist-a img {
+    width: 60px;
+    margin-left: 2px;
+    margin-right: 10px;
+    min-height: 30px;
+    max-height: 60px;
+    float: left;
+    transition: all .2s;
+}
+
+.headlist-a em {
+    display: block;
+    height: 18px;
+    font-style: normal;
+    font-size: 14px;
+    overflow: hidden;
+    font-weight: 700;
+    color: #333;
+}
+
+.headlist-a p {
+    color: #666;
+    height: 32px;
+    line-height: 16px;
+    margin-top: 6px;
+    overflow: hidden;
+}
+
+.discover-2 {
+    background-color: #fff;
+    height: 1225px;
+    margin-top: 9px;
+    padding: 0 10px
+}
+
+.discover-2-title {
+    background-position: 0 -634px;
+    height: 51px;
+}
+
+.goods-list {
+    height: 1140px;
+}
+
+.goods-list a {
+    display: block;
+    height: 100px;
+    margin-bottom: 15px;
+    width: 270px;
+}
+
+.goods-list a>img {
+    display: block;
+    float: left;
+    width: 100px;
+    padding-right: 10px;
+}
+
+.goods-list a>strong {
+    display: block;
+    /*width: 156px;*/
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    /*margin-left: 110px;*/
+    /*overflow: hidden;*/
+    /*这里的strong元素如果写了固定宽度（此宽度小于父元素剩余宽度）却不写margin-left/overflow则会导致strong元素跑到float:left的img元素下面，因为img元素
+    下面还有剩余空间，所以最简洁的方法是不写固定宽度，由于已经设置了display:block，所以他会宽度自适应，宽度为270px（即撑满父元素的宽度），宽度大于img元素
+    下面的剩余空间，就不会到Img元素下面去了*/
+}
+
+.goods-list a>p {
+    overflow: hidden;
+    height: 40px;
+    line-height: 20px;
+    color: #666;
+}
+
+.goods-list a>em {
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 6px;
+    color: #68acf5;
+}
+
+.goods-list a:hover img {
+    opacity: .8;
+}
+
+.goods-list a:hover strong {
+    color: #f40;
+}
+
+.goods-refresh {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.goods-refresh:hover {
+    color: #f40;
+    transition: color .2s;
+}
+
+.goods-icon .icon-taxi {
+    font-size: 18px;
+    margin-right: 6px;
+    vertical-align: sub;
+}
+
+.discover-3 {
+    margin-top: 10px;
+    height: 1066px;
+    background-color: #fff;
+}
+
+.discover-3-title {
+    background-position: 8px -791px;
+    height: 36px;
+}
+
+.shoplist {
+    height: 1002px;
+}
+
+.shop-item {
+    display: block;
+    height: 220px;
+    padding: 14px 8px 14px 10px;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.shoplist a:last-child {
+    border-bottom: none;
+}
+
+.shop-item strong {
+    font-size: 14px;
+}
+
+.shop-item p {
+    color: #999;
+}
+
+.shop-item-img {
+    margin-top: 8px;
+}
+
+.shop-item-left {
+    width: 90px;
+    float: left;
+}
+
+.shop-item-left img {
+    width: 89px;
+    height: 89px;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.shop-item-left img:hover {
+    opacity: .8;
+}
+
+.shop-item:hover strong {
+    color: #f40;
+}
+
+.shop-big {
+    width: 180px;
+    height: 180px;
+}
+
+.shop-refresh {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+    margin-top: -5px;
+    transition: color 2s;
+}
+
+.shop-icon .icon-taxi {
+    font-size: 24px;
+    margin-right: 4px;
+    position: relative;
+    top: 4px;
+    color: #888;
+    transition: color 2s;
+}
+
+.shop-refresh span {
+    transition: color 2s;
+}
+
+.shop-refresh:hover .shop-icon .icon-taxi,
+.shop-refresh:hover span {
+    color: #f40;
+}
+
+
+/*.sidebar-discover .discover-3 .shop-refresh:hover {
+    color: #f40;层级已经比.icon-taxi高了
+}*/
+
+.sidebar-tanx {
+    width: 290px;
+    margin-top: 14px;
+}
+
+.sidebar-tanx h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.tanx {
+    width: 290px;
+    height: 242px;
+    background-color: transparent;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tanx-pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.tanx-bg1 {
+    background: url(https://ossgw.alicdn.com/creatives-assets/image/2016/11/22/8a2403c1-d97a-4cc8-8341-5053d0408710.png) no-repeat;
+}
+
+.tanx-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.tanx-text {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    margin-left: -110px;
+    z-index: 3;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.tanx-text p:first-child {
+    font-size: 32px;
+    color: #fff;
+    width: 230px;
+    height: 50px;
+    line-height: 50px;
+    margin: 12px auto 0;
+}
+
+.tanx-text p:last-child {
+    font-size: 16px;
+    width: 110px;
+    height: 24px;
+    left: 24px;
+    margin: 4px auto 0;
+    color: #fff;
+}
+
+.tanx-tg {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 4;
+    height: 40px;
+    width: 100%;
+}
+
+.tanx-bg2 {
+    background: url("https://img.alicdn.com/tps/TB1X4Y8OXXXXXaBXpXXXXXXXXXX-80-40.png") 50% center no-repeat;
+}

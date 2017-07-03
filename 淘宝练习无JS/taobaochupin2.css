@@ -1,0 +1,301 @@
+html,
+body,
+div,
+header,
+footer,
+section,
+img,
+a,
+p,
+strong,
+em,
+ul,
+li,
+time,
+span,
+nav,
+h {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+html {
+    font-size: 20px;
+}
+
+#contain {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 4.3rem;
+    background-color: #eee;
+}
+
+#header-cover {
+    height: 3.7rem;
+    background-color: #FE5400;
+    background-image: url(data:image/png;base64,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);
+    background-repeat: no-repeat;
+    background-size: 2.7rem 2rem;
+    background-position: 9px center;
+    padding: 0.6rem 0.5rem 0.6rem 3.7rem;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #B52600;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+header span:first-child {
+    font-size: 1.5rem;
+}
+
+#main-cover {
+    min-width: 32rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+}
+
+.section-1 {
+    position: relative;
+}
+
+.section-1-imgbox {
+    padding-top: 31.3%;
+}
+
+.section-1-imgbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section-1 ul {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.25rem;
+    list-style: none;
+}
+
+.section-1 ul>li {
+    float: left;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.section-2 {
+    margin: 0 1.149rem;
+    border-bottom: 1px solid #eee;
+}
+
+.section-2 a {
+    float: left;
+    width: 20%;
+    height: 50%;
+    text-align: center;
+}
+
+.section-2 .section-2-imgbox {
+    padding-top: 70.5%;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.section-2-imgbox img {
+    position: absolute;
+    left: 0;
+    height: auto;
+    top: 0;
+}
+
+.section-2 a>p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
+
+.section-2:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.section-3 {
+    height: 3rem;
+    padding: 0.3rem 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 2.6rem;
+}
+
+
+/*text-overflow生效必备的3个属性： <' overflow '> , <' width '> 和 <' white-space '> 都直接定义在了内联内容的父级块容器上.此处width:100%可以省略不写，因为div默认铺满全屏(或者写固定宽度，但是此处铺满全屏效果更好）*/
+
+.section-3 span:first-child {
+    display: block;
+    border-right: 1px solid rgb(232, 232, 232);
+    width: 7rem;
+    height: 2.4rem;
+    box-sizing: border-box;
+    background: url(https://gw.alicdn.com/tps/i3/TB12wM3HXXXXXbxapXXdFmWHFXX-207-60.png?imgtag=avatar) center center / 5.175rem 1.5rem no-repeat;
+    float: left;
+}
+
+.section-3 span:nth-child(2) {
+    color: rgb(216, 20, 33);
+    border: 1px solid rgb(216, 20, 33);
+    font-size: 1.40625rem;
+    border-radius: 4px;
+    margin-left: 1rem;
+}
+
+.section-3 span:last-child {
+    color: rgb(53, 53, 53);
+    font-size: 1.5rem;
+}
+
+.style {
+    height: 0.49rem;
+    background-color: rgb(238, 238, 238);
+}
+
+.section-4 {
+    height: 16.1015rem;
+}
+
+.section-4-left {
+    width: 40%;
+    position: relative;
+    float: left;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.section-4-imgbox {
+    background: url("https://gw.alicdn.com/tps/i2/TB1nQXGJVXXXXcEXXXXKKOh2VXX-432-567.jpg_q50.jpg?imgtag=avatar");
+    background-size: contain;
+    height: 16.15rem;
+    background-repeat: no-repeat;
+}
+
+time {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+}
+
+.time {
+    background: #333;
+    color: #fff;
+    width: 1.05rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 0.1rem;
+    margin: 0 0.035rem;
+}
+
+.dot {
+    color: #333;
+    background: transparent;
+}
+
+.section-4-right {
+    width: 60%;
+    float: left;
+}
+
+.imgbox-1 {
+    background-image: url("https://img.alicdn.com/tps/TB19RaGLpXXXXcDXpXXXXXXXXXX-333-261.jpg_q50.jpg?imgtag=avatar");
+    border-left: 1px solid #eee;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.imgbox-2 {
+    background-image: url("https://img.alicdn.com/imgextra/i2/75/TB2sLpJjFXXXXb3XpXXXXXXXXXX_!!75-2-subaru.png");
+    border-bottom: 1px solid #eee;
+}
+
+.imgbox-1,
+.imgbox-2 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 7.4015rem;
+}
+
+.imgbox-3 {
+    background-image: url("https://gw.alicdn.com/tps/TB1MzfaLpXXXXaXXXXXXXXXXXXX-345-306.jpg_q50.jpg");
+    border-left: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.imgbox-4 {
+    background-image: url("https:img.alicdn.com/imgextra/i3/27/TB21MzojFXXXXXbXpXXXXXXXXXX_!!27-2-subaru.png");
+}
+
+.imgbox-3,
+.imgbox-4 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 8.699rem;
+}
+
+div[class*="imgbox-"] {
+    float: left;
+}
+
+footer {
+    height: 3.8rem;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #F8F8F8;
+    padding-top: 0.4rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+}
+
+footer a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    font-size: 1rem;
+    color: #5D656B;
+    line-height: 1.5rem;
+}
+
+footer a>span {
+    font-size: 2.2rem;
+    font-family: 'h5index-iconfont';
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    color: #5D656B;
+    top: 0;
+    left: 0;
+    display: block;
+}

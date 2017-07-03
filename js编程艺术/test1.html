@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>shopping list</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="test.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>What to buy</h1>
+    <p title="a gentle reminder">Don't forget to buy this stuff.</p>
+    <p>this is just a test</p>
+    <ul id="purchases">
+        <li>A tin of beans</li>
+        <li class="sale">Cheese</li>
+        <li class="sale important">Milk</li>
+    </ul>
+    <script>
+        var shopping = document.getElementById("purchases");
+        var items = shopping.getElementsByTagName("*")
+        log(items.length);
+        log(document.getElementsByClassName("important sale").length);
+        var shopping = document.getElementById("purchases");
+        var sales = shopping.getElementsByClassName("sale");
+        log(sales.length);
+
+        var shopping = document.getElementById("purchases");
+        var sales = shopping.getElementsByClassName("sale");
+        log(typeof sales[i]);
+
+        var paras = document.getElementsByTagName("p");
+        for (var i = 0; i < paras.length; i++) {
+            var title_text = paras[i].getAttribute("title");
+            if (title_text) log(title_text);
+        }
+
+        var shopping = document.getElementById("purchases");
+        log(shopping.getAttribute("title"));
+        shopping.setAttribute("title", "a list of goods");
+        log(shopping.getAttribute("title"));
+
+        function log(param) {
+            console.log(param);
+        }
+        log
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,911 @@
+body {
+    background-color: #eee;
+}
+
+.wrapper {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.section {
+    width: 890px;
+    float: left;
+}
+
+.section-1 {
+    width: 890px;
+    height: 777px;
+}
+
+.section-title {
+    background: url(https://img.alicdn.com/tfs/TB1vQzVOVXXXXX4XpXXXXXXXXXX-220-1170.png) 0 0 no-repeat;
+    height: 33px;
+    position: relative;
+}
+
+.section-title a {
+    position: absolute;
+    right: 12px;
+    bottom: 4px;
+    background-color: #fff;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 9px 0 14px;
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+.title-1-position {
+    background-position: center -604px;
+}
+
+.section-1-container {
+    height: 744px;
+}
+
+.section-1-content {
+    width: 440px;
+    height: 362px;
+    float: left;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.margin-right {
+    margin-right: 9px;
+}
+
+.content-sidebar {
+    float: left;
+    width: 100px;
+}
+
+.content-sidebar-logo {
+    display: block;
+    height: 100px;
+}
+
+.content-sidebar-link {
+    height: 262px;
+    background-color: #406cc0;
+}
+
+.content-sidebar-link h3 {
+    font-size: 14px;
+    text-indent: 8px;
+    padding: 8px 0 4px 0;
+    color: #fff;
+}
+
+.content-sidebar-link .link-list {
+    height: 217px;
+    padding: 0 0 7px 8px;
+}
+
+.content-sidebar-link .link-list a {
+    float: left;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .2);
+    padding: 0 8px;
+    height: 19px;
+    line-height: 19px;
+    margin: 0 3px 3px 0;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.link-list a:hover {
+    background-color: #fff;
+    color: #f40;
+}
+
+.content-contain {
+    width: 340px;
+    margin-left: 100px;
+    background-color: #fff;
+    height: 362px;
+    border: 2px solid rgba(58, 23, 208, .3);
+    box-sizing: border-box;
+    border-left: none;
+}
+
+.section-1-content:hover .content-contain {
+    border-color: #406cc0;
+}
+
+.content-contain img:hover,
+.content-left:hover img,
+.content-right:hover img {
+    opacity: .8;
+}
+
+.content-contain-up {
+    height: 202px;
+}
+
+.contain-up-left {
+    width: 100px;
+    height: 201px;
+    border-right: 1px solid #efefef;
+    float: left;
+    border-bottom: 1px solid #efefef;
+}
+
+.contain-up-right {
+    margin-left: 202px;
+    width: 136px;
+    /*此width属性若设置的比较宽则会覆盖住其父元素的边框，在父元素边框（也就是包围次元素的边框）中会出现子元素的边框*/
+}
+
+.contain-up-right a {
+    display: block;
+    height: 81px;
+    padding: 9px 9px 10px 10px;
+    border-bottom: 1px solid #efefef;
+}
+
+.contain-up-right a>img {
+    margin-top: 22px;
+    width: 60px;
+    height: 60px;
+    float: right;
+}
+
+.contain-up-right a>strong {
+    display: block;
+    width: 56px;
+    height: 18px;
+    margin-top: 6px;
+}
+
+.contain-up-right a>em {
+    display: block;
+    width: 56px;
+    height: 30px;
+    line-height: 15px;
+    color: #666;
+    margin-top: 3px;
+    font-style: normal;
+}
+
+.contain-up-right a:hover strong {
+    color: #f40;
+}
+
+.content-contain-down {
+    height: 160px;
+}
+
+.content-contain-down .contain-down-left {
+    height: 140px;
+    width: 201px;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.content-contain-down .contain-down-left img {
+    width: 180px;
+    min-width: 140px;
+}
+
+.contain-down-left-add {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 131px;
+    height: 24px;
+    line-height: 24px;
+    background-color: rgba(255, 255, 255, .8);
+    padding-left: 50px;
+    overflow: hidden;
+}
+
+.contain-down-left-add em {
+    font-style: normal;
+    position: absolute;
+    width: 50px;
+    left: 0;
+    background-color: #459ac4;
+    color: #fff;
+    line-height: 24px;
+}
+
+.contain-down-left-add i {
+    display: block;
+    font-style: normal;
+    overflow: hidden;
+}
+
+.contain-down-left-add strong {
+    overflow: hidden;
+    margin-left: -75px;
+    font-weight: 400;
+    color: #666;
+    display: block;
+}
+
+.contain-down-right {
+    margin-left: 201px;
+}
+
+.contain-down-right a {
+    width: 120px;
+    height: 64px;
+    padding: 8px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+}
+
+.contain-down-left:hover span {
+    height: 87px;
+}
+
+.contain-down-left:hover span>i {
+    color: #f40;
+}
+
+.contain-down-right a>span {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .8);
+    bottom: 7px;
+    left: 6px;
+    width: 125px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.contain-down-right a>span:hover {
+    background-color: #fff;
+    color: #f40;
+}
+
+.contain-down-left-add,
+.contain-down-right a>span {
+    transition: all .3s;
+}
+
+.section-banner-1 {
+    width: 880px;
+    height: 70px;
+    margin: 5px auto 10px auto;
+    background: url(https://gtms04.alicdn.com/tps/i4/TB1.3TPLVXXXXXYapXXnLSnFXXX-880-70.png) no-repeat;
+    position: relative;
+}
+
+.banner-1-img {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 680px;
+    height: 70px;
+}
+
+.banner-1-img img {
+    width: 70px;
+    height: 70px;
+}
+
+.imgpos {
+    position: absolute;
+    top: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.imgpos1 {
+    left: 4px;
+}
+
+.imgpos2 {
+    left: 81px;
+}
+
+.imgpos3 {
+    right: 81px;
+}
+
+.imgpos4 {
+    right: 4px;
+}
+
+.banner-1-text {
+    position: absolute;
+    left: 274px;
+    top: 0;
+    color: #004a7e;
+    text-align: center;
+    width: 332px;
+}
+
+.tag {
+    position: absolute;
+    right: 3px;
+    top: 23px;
+    font-size: 18px;
+    line-height: 24px;
+    height: 24px;
+    width: 84px;
+}
+
+.shorttitle {
+    font-size: 28px;
+    font-weight: 900;
+    width: 237px;
+    height: 36px;
+    line-height: 36px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.fullcut {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 237px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.title-2-position {
+    background-position: center -719px;
+    height: 37px;
+}
+
+.section-2-container {
+    height: 268px;
+    width: 892px;
+}
+
+.section-2-content {
+    width: 221px;
+    height: 258px;
+    background-color: #fff;
+    border-right: 2px solid #eaeaea;
+    margin-bottom: 10px;
+    float: left;
+    border: 1px solid #f0f0f0;
+}
+
+.section-2-content:hover {
+    border-color: #f40;
+}
+
+.section-2-content-title {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.section-2-content-title h3 {
+    height: 18px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 115px;
+    margin: auto;
+    position: relative;
+}
+
+.section-2-content-title h3>a {
+    display: block;
+}
+
+.section-2-content-title h3 a>img {
+    height: 18px;
+}
+
+.title-qrcover {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 18px;
+    height: 18px;
+}
+
+.section-2-icon .icon-comment {
+    font-size: 24px;
+    color: #ccc;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.title-qr {
+    position: absolute;
+    top: 20px;
+    left: -17px;
+    background-color: #fff;
+    padding: 10px;
+    width: 66px;
+    height: 80px;
+    border: 1px solid #f0f0f0;
+    opacity: 0;
+}
+
+.title-qr img {
+    width: 66px;
+    height: 66px;
+}
+
+.title-qr p {
+    color: #666;
+    font-weight: 400;
+    font-size: 12px;
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+}
+
+.title-qrcover:hover i {
+    color: #F40;
+}
+
+.title-qrcover:hover .title-qr {
+    top: 32px;
+    opacity: 1;
+    z-index: 5;
+}
+
+.title-qrcover,
+.title-qr {
+    transition: all .3s;
+}
+
+.section-2-content-box {
+    height: 222px;
+}
+
+.box-thumb1 {
+    width: 111px;
+    height: 219px;
+    position: relative;
+    display: block;
+    float: left;
+    border-right: 1px solid #f0f0f0;
+    box-sizing: border-box;
+}
+
+.box-thumb1 img {
+    width: 90px;
+    height: 198px;
+    padding: 10px;
+}
+
+.box-thumb1 span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ff0055;
+    color: #fff;
+    height: 42px;
+    padding: 0 6px;
+    line-height: 20px;
+}
+
+.box-thumb2,
+.box-thumb3 {
+    width: 110px;
+    height: 111px;
+    display: block;
+    margin-left: 111px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.box-thumb2 img,
+.box-thumb3 img {
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+}
+
+.box-thumb2 span,
+.box-thumb3 span {
+    position: absolute;
+    bottom: 9px;
+    right: 10px;
+    left: 10px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.box-thumb1:hover img {
+    opacity: .8;
+}
+
+.box-thumb2:hover span,
+.box-thumb3:hover span,
+.section-4-content-box a:hover span {
+    background-color: #fff;
+    color: #f40;
+}
+
+.title-3-position {
+    background-position: center -679px;
+    height: 37px;
+}
+
+.section-3-container {
+    width: 892px;
+    height: 536px;
+}
+
+.section-3-content {
+    width: 221px;
+    height: 258px;
+    float: left;
+    border-right: 2px solid #f0f0f0;
+    background-color: #fff;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.section-3-content-box {
+    height: 160px;
+}
+
+.section-3-content-box a {
+    float: left;
+    width: 110px;
+    height: 150px;
+    text-align: center;
+    position: relative;
+}
+
+.section-3-content-box a>img {
+    width: 90px;
+    height: 90px;
+}
+
+.section-3-content-box a>strong {
+    display: block;
+    font-size: 14px;
+    height: 21px;
+    margin: 5px 0 4px 0;
+}
+
+.section-3-content-box a>em {
+    font-style: normal;
+    display: block;
+    height: 18px;
+}
+
+.section-3-content-box a:hover img {
+    opacity: .8;
+}
+
+.section-3-content-box a:hover {
+    color: #f40;
+}
+
+.section-3-content-menu {
+    height: 55px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 6px;
+}
+
+.section-3-content-menu a {
+    padding: 0 4px;
+    width: 65px;
+    height: 22px;
+    line-height: 22px;
+    float: left;
+    text-align: center;
+}
+
+.section-3-content-menu a:hover {
+    color: #f40;
+}
+
+.section-3-content:hover,
+.section-4-content:hover {
+    border-right-color: transparent;
+    box-shadow: 1px 1px 0 #f40, 1px -1px 0 #f40, -1px 1px 0 #f40, -1px -1px 0 #f40;
+    position: relative;
+    z-index: 2;
+    /*此z-index属性的目的是将box-shadow的层级提高，这样能够覆盖住section-4/3-content的子元素的边框，若不然，可能会出现hover时box-shadow被
+    子元素的边框覆盖住一部分的情况*/
+}
+
+.title-4-position {
+    background-position: center -518px;
+    height: 37px;
+}
+
+.section-4-container {
+    width: 892px;
+    height: 536px;
+}
+
+.section-4-content {
+    width: 221px;
+    height: 258px;
+    background-color: #fff;
+    border-right: 2px solid #f0f0f0;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.section-4-content-box a {
+    width: 111px;
+    height: 112px;
+    float: left;
+    border: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    margin-top: -1px;
+    margin-left: -1px;
+    position: relative;
+    border-right: none;
+    /*此处是处理边框带来的影响*/
+}
+
+.section-4-content-box a>img {
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+}
+
+.section-4-content-box a>span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .8);
+    height: 20px;
+    line-height: 20px;
+    transition: all .2s;
+}
+
+.title-5-position {
+    background-position: center -558px;
+    height: 37px;
+}
+
+.section-5-container {
+    height: 276px;
+}
+
+.content-left {
+    width: 253px;
+    height: 117px;
+    background-color: #fff;
+    padding: 10px 10px 10px 15px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    position: relative;
+}
+
+.content-left-title {
+    position: relative;
+}
+
+.content-left-title a>img {
+    height: 18px;
+}
+
+.section-5-title-qrcover {
+    position: absolute;
+    top: -6px;
+    left: 76px;
+}
+
+.section-5-icon .icon-comment {
+    font-size: 24px;
+    color: #ccc;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.section-5-title-qr {
+    position: absolute;
+    top: 35px;
+    left: -17px;
+    background-color: #fff;
+    padding: 10px;
+    width: 66px;
+    height: 80px;
+    border: 1px solid #f0f0f0;
+    opacity: 0;
+}
+
+.section-5-title-qr img {
+    width: 66px;
+    height: 66px;
+}
+
+.section-5-title-qr p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    text-align: center;
+    color: #666;
+    font-weight: normal;
+}
+
+.section-5-icon:hover+span {
+    opacity: 1;
+    top: 45px;
+}
+
+.section-5-title-qr {
+    transition: all .3s;
+}
+
+.start-time {
+    position: absolute;
+    left: 144px;
+    top: 10px;
+    overflow: hidden;
+    line-height: 24px;
+    height: 24px;
+    width: 114px;
+    font-size: 14px;
+    color: #dc3535;
+    text-align: right;
+}
+
+.content-left-text a img {
+    width: 90px;
+    height: 90px;
+    float: right;
+}
+
+.content-left-text a h3 {
+    width: 148px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #4c4d4e;
+    padding-top: 12px;
+    font-weight: normal;
+}
+
+.content-left-price {
+    margin-top: 10px;
+    width: 140px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #dc3535;
+}
+
+.content-left-price span {
+    font-family: "Microsoft Yahei";
+    font-size: 16px;
+    display: inline-block;
+}
+
+.content-left-price-add {
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+    line-height: 14px;
+}
+
+.section-5-content-left {
+    float: left;
+}
+
+.section-5-content-right {
+    margin-left: 279px;
+    width: 612px;
+}
+
+.content-right {
+    background-color: #fff;
+    width: 183px;
+    height: 117px;
+    padding: 10px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    float: left;
+}
+
+.content-right-title a>img {
+    height: 18px;
+}
+
+.content-right-title {
+    position: relative;
+}
+
+.content-right-title-qrcover {
+    position: absolute;
+    top: -8px;
+    left: 84px;
+}
+
+.content-right-title-qr {
+    position: absolute;
+    top: 35px;
+    left: -17px;
+    background-color: #fff;
+    padding: 10px;
+    width: 66px;
+    height: 80px;
+    border: 1px solid #f0f0f0;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.content-right-title-qr img {
+    width: 66px;
+    height: 66px;
+}
+
+.content-right-title-qr p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6px;
+    text-align: center;
+    color: #666;
+    font-weight: normal;
+}
+
+.content-right-box img {
+    width: 90px;
+    height: 90px;
+    float: right;
+    position: relative;
+    z-index: 3;
+}
+
+.content-right-box-text,
+.content-right-box em {
+    display: block;
+    width: 82px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.content-right-box-text {
+    font-weight: bold;
+}
+
+.content-right-box em {
+    color: #666;
+    font-style: normal;
+}
+
+.box-btn {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    width: 74px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #f40;
+    color: #f40;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.content-left:hover,
+.content-right:hover {
+    outline: 1px solid #f40;
+    /*此属性视觉上占了空间，实际上不占用页面空间，不影响页面其他元素的摆放*/
+}
+
+.section-banner-2 {
+    height: 70px;
+    margin-top: 15px;
+}
+
+.section-banner-2 img {
+    width: 100%;
+    display: block;
+}

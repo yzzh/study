@@ -829,6 +829,38 @@ li {
     width: 139px;
     height: 102px;
     border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.section-text .section-text-top-b a>strong {
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    font-weight: 400;
+}
+
+.section-text .section-text-top-b a>em {
+    position: absolute;
+    top: 30px;
+    left: 11px;
+    font-style: normal;
+}
+
+.section-text .section-text-top-b a>span {
+    position: absolute;
+    right: 9px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.section-text .section-text-top-b a:last-child {
+    border-bottom: none;
 }
 
 .section-text-bottom {
@@ -846,20 +878,73 @@ li {
     padding: 10px 0;
 }
 
+.section-text-bottom-img {
+    width: 180px;
+    height: 140px;
+}
+
 .section-text-bottom-add {
     position: absolute;
-    bottom: 10px;
+    bottom: -11px;
     left: 10px;
+    background-color: rgba(255, 255, 255, .8);
+    width: 180px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.section-text-bottom-add>em {
+    background: #459ac4;
+    width: 50px;
+    color: #fff;
+    font-style: normal;
+    float: left;
+}
+
+.section-text-bottom-add>i {
+    font-style: normal;
+    font-size: 12px;
 }
 
 .section-text-bottom-right {
     margin-left: 201px;
     width: 140px;
     height: 162px;
+    border-left: 1px solid #eee;
+    box-sizing: border-box;
 }
 
 .section-text-bottom-right a {
     width: 136px;
-    height: 81px;
+    height: 80px;
     display: block;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    position: relative;
+    padding: 8px;
+}
+
+.section-text-bottom-right a:first-child {
+    border-bottom: none;
+}
+
+.section-text-bottom-right a>span {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .8);
+    width: 100%;
+    left: 0px;
+}
+
+div[class*="contain"] {
+    width: 440px;
+    height: 362px;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.section-a-1-contain,
+.section-a-3-contain {
+    margin-right: 10px;
 }

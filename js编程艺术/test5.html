@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exlpaining the Document Object Model</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="test5.css" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            var para = document.getElementById("example");
+            alert(typeof para.nodeName);
+            alert(typeof para.style);
+            alert("the color is " + para.style.color);
+            alert("the font family is" + para.style.fontFamily);
+            para.style.color = "red";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>What is the Document Object Model?</h1>
+    <p>
+        the <abbr title="world wide web consortium">W3C</abbr> defines the <abbr title="documentobject model">DOM</abbr> as:
+    </p>
+    <blockquote cite="http://www.w3.org/DOM/">
+        <p>
+            A platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of document.
+        </p>
+    </blockquote>
+    <p>
+        It is an <abbr title="Application Programming iNTERFACE">API</abbr> that can be used to navigate <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="extensile Markup Language">XML</abbr> documents.
+    </p>
+    <ul id="navigation">
+        <li><a href="" accesskey="1">home</a></li>
+        <li><a href="" accesskey="4">search</a></li>
+        <li><a href="" accesskey="0">contact</a></li>
+    </ul>
+
+    <script src="addLoadEvent.js"></script>
+    <script src="test5.js"></script>
+    <p id="example" style="color:grey; font-family:'Arial',sans-serif;">
+        an example of a paragraph.
+    </p>
+
+</body>
+
+</html>

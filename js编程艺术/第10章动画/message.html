@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Message</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .p1 {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function checkWin() {
+            document.write("The new window's name is: " + myWindow.name)
+        }
+    </script>
+</head>
+
+<body>
+    <p id="message">Whee</p>
+    <p id="message2">whoa</p>
+    <button id="btn">ai哦i哦i</button>
+    <p class="p1" id="p1">dgsdgsdgsd</p>
+    <input type="text" id="input">
+
+    <button onclick="myFunction('myList1','myList2')">比较列表 1 和列表 2：</button>
+    <button onclick="myFunction('myList1','myList3')">比较列表 1 和列表 3：</button>
+
+    <p id="demo">点击按钮来比较两个列表中的首个项目。</p>
+
+    列表 1：
+    <ul id="myList1">
+        <li>Water</li>
+        <li>Milk</li>
+    </ul>
+    列表 2：
+    <ul id="myList2">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    列表 3：
+    <ul id="myList3">
+        <li>Water</li>
+        <li>Fire</li>
+    </ul>
+
+    <button onclick="myFunction()">试一下</button>
+    <p id="demo">点击按钮来检查 button 元素是否支持特性 Core XML DOM Level 2。</p>
+
+
+    <script src="scripts/addLoadEvent.js"></script>
+    <script src="scripts/moveElement.js"></script>
+    <script src="scripts/positionMessage.js"></script>
+    <script>
+        function show() {
+            document.getElementById('p1').style.display = 'block';
+        }
+
+        function hide() {
+            document.getElementById('p1').style.display = 'none';
+        }
+        var btn = document.getElementById('btn');
+        btn.addEventListener('mouseover', show, false);
+        btn.addEventListener('mouseout', hide, false);
+        var input = document.getElementById('input');
+        input.addEventListener('keydown', function(e) {
+            console.log('keydown');
+        })
+        input.addEventListener('keypress', function(e) {
+            console.log('keypress');
+        })
+    </script>
+
+    <script type="text/javascript">
+        myWindow = window.open('', 'MyName', 'width=200,height=100')
+        myWindow.document.write("This is 'myWindow'")
+    </script>
+    <script>
+        function myFunction(x, y) {
+            var item1 = document.getElementById(x).childNodes[1];
+            var item2 = document.getElementById(y).childNodes[1];
+            var x = document.getElementById("demo");
+            x.innerHTML = item1.isEqualNode(item2);
+        }
+    </script>
+
+
+    <script>
+        // function myFunction() {
+        //     var item = document.getElementsByTagName("BUTTON")[0];
+        //     var x = document.getElementById("demo");
+        //     x.innerHTML = item.isSupported("Core", "2.0");
+        // }
+    </script>
+
+    <input type="button" value="What's the name of 'myWindow'?" onclick="checkWin()">
+
+</body>
+
+</html>

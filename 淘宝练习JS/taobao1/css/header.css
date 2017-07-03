@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+body {
+    font-family: tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #3c3c3c;
+}
+
+#header-cover {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 1000;
+}
+
+#header {
+    width: 1190px;
+    margin: 0 auto;
+    height: 35px;
+}
+
+.iconfont {
+    font-size: 12px;
+}
+
+.icon-edit,
+.icon-comment {
+    color: #f40;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #3c3c3c;
+}
+
+.h {
+    color: #f22e00!important;
+}
+
+#header a {
+    color: #6c6c6c;
+}
+
+.header-ul-l>li,
+.header-ul-r>li {
+    display: inline-block;
+    line-height: 35px;
+}
+
+.header-pipe {
+    color: #ddd;
+    padding: 0 5px;
+}
+
+#header .header-ul-l a:hover,
+#header .header-menu a:hover {
+    color: #f40;
+}
+
+.header-ul-l {
+    float: left;
+}
+
+.header-ul-r {
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+
+.header-ul-li-a {
+    padding: 0 6px;
+    float: left;
+}
+
+.header-ul-l li {
+    margin-right: 7px;
+}
+
+.header-ul-r li {
+    /* padding: 0 6px; */
+}
+
+.header-menu-area {
+    position: relative;
+}
+
+.menu-hide {
+    /*border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;*/
+    border: 1px solid #eee;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #fff;
+    margin-top: -1px;
+    padding: 8px 0;
+    z-index: 99;
+}
+
+.menu-hide a {
+    display: block;
+    padding: 0 5px;
+    line-height: 28px;
+    white-space: nowrap;
+}
+
+.header-menu-area.hover .header-menu {
+    background-color: #fff;
+}
+
+.header-menu-area.hover .menu-hide {
+    display: block;
+}
+
+.header-menu:hover {
+    /* background-color: #fff; */
+}
+
+.header-menu {
+    position: relative;
+    z-index: 999;
+    padding: 0 6px;
+}
+
+.header-ul-r .header-menu-area .menu-hide a:hover {
+    color: #6c6c6c;
+    background-color: #f5f5f5;
+}
+
+.menu-hide-nav {
+    float: left;
+    width: 25%;
+    border-right: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.menu-nav li {
+    float: left;
+    width: 24%;
+    height: 25px;
+}
+
+.header-menu-area .menu-nav {
+    left: -1093px;
+    width: 1184px;
+}

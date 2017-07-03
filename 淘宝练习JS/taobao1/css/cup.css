@@ -1,0 +1,459 @@
+#banner-cover {
+    background-color: #e00203;
+}
+
+#banner {
+    height: 45px;
+    width: 1190px;
+    margin: 0 auto;
+}
+
+#top-cover {
+    background-color: #fff;
+    padding-top: 30px;
+    height: 90px;
+    position: relative;
+}
+
+#top {
+    width: 1190px;
+    /* height: 90px; */
+    margin: 0 auto;
+}
+
+.logo {
+    width: 230px;
+    float: left;
+    position: relative;
+    /*父容器高度如果不写死，子元素的高度超出父容器时会影响周边元素的位置，若不写死，则可以将子元素设置定位，使之超出文本流，不影响其他元素的摆放*/
+}
+
+.search {
+    margin-left: 265px;
+    margin-right: 300px;
+}
+
+#qr-cover {
+    float: right;
+    width: 96px;
+    height: 114px;
+    border: 1px solid #eee;
+    margin-top: -90px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.logo img {
+    position: absolute;
+    top: -30px;
+}
+
+.search-tab li {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #f40;
+    cursor: pointer;
+}
+
+.search-tab .tab-baby:hover {
+    background-color: #ff5400;
+    color: #fff;
+}
+
+.search-tab .tab-tmall:hover {
+    background-color: #f9e6e6;
+    color: #c60000;
+}
+
+.search-tab .tab-shop:hover {
+    background-color: #ffeee5;
+    color: #ff5400;
+}
+
+.search-input {
+    border: 3px solid #f50;
+    height: 34px;
+    margin-right: 122px;
+}
+
+.search-input input {
+    padding: 6px 0;
+    text-indent: 20px;
+    line-height: 22px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    width: 100%;
+}
+
+.search-button {
+    float: right;
+    width: 122px;
+    margin-top: -40px;
+    background-color: #ff4200;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-panel {
+    position: relative;
+}
+
+.top-icon-a {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.file-input-cover {
+    position: absolute;
+    width: 24px;
+    height: 20px;
+    top: 10px;
+    right: 124px;
+    z-index: 2;
+}
+
+.file-input-cover label {
+    cursor: pointer;
+}
+
+.file-input-cover:hover {
+    color: #f40;
+    cursor: pointer;
+}
+
+.file-input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.top-icon-file {
+    font-size: 20px;
+    width: 24px;
+    height: 20px;
+    position: absolute;
+    line-height: 20px;
+    text-align: center;
+    top: 0;
+    right: 0;
+    /*用来控制图标在中间显示的（完全覆盖住.file-input*/
+}
+
+.search-add {
+    padding: 5px 41px 0 0;
+    position: relative;
+}
+
+.search-add-list {
+    height: 18px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.search-add-list a {
+    margin-right: 8px;
+}
+
+.search-add-list a:hover {
+    color: #f40;
+}
+
+.search-add-more {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+}
+
+#qr img {
+    width: 80px;
+    height: 80px;
+}
+
+#qr {
+    text-align: center;
+}
+
+.qr-text {
+    line-height: 20px;
+}
+
+.line-area {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -21px;
+    border: 1px solid #eee;
+    border-right: none;
+    top: -1px;
+    cursor: pointer;
+}
+
+.line {
+    background-color: #ddd;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.line-x {
+    width: 12px;
+    height: 1px;
+    left: 4px;
+    top: 9.5px;
+}
+
+.line-y {
+    width: 1px;
+    height: 12px;
+    left: 9.5px;
+    top: 4px;
+}
+
+
+/*.search.select .tab-tmall {
+    background-color: #c60000;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.search.selected .tab-baby,
+.search.selected .tab-shop {
+    background-color: #ff5400;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search.selected .search-input {
+    border-color: #ff5400;
+}
+
+.search.selected .search-button {
+    background-color: #ff5400;
+}
+
+
+.search-tab-text.tab-tmall.select {
+    background-color: #c60000;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search-input.select {
+    border-color: #c60000!important;
+}
+
+.search-button.select {
+    background-color: #c60000!important;
+}
+
+.search-tab-text.tab-baby.selected,
+.search-tab-text.tab-shop.selected {
+    background-color: #ff5400;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search-input.selected {
+    border-color: #ff5400;
+}
+
+.search-button.selected {
+    background-color: #ff5400;
+}
+.search-tab .tab-baby.baby,
+.search-tab .tab-shop.shop {
+    background-color: #ff5400;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search-input.baby,
+.search-input.shop {
+    border-color: #ff5400;
+}
+
+.search-button.baby,
+.search-button.shop {
+    background-color: #ff5400;
+}
+
+.search-tab .tab-tmall.tmall {
+    background-color: #c60000;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search-input.tmall {
+    border-color: #c60000;
+}
+
+.search-button.tmall {
+    background-color: #c60000;
+}*/
+
+.search[data-current="0"] .tab-baby {
+    background-color: #ff5400;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search[data-current="0"] .search-input {
+    border-color: #ff5400;
+}
+
+.search[data-current="0"] .search-button {
+    background-color: #ff5400;
+}
+
+.search[data-current="1"] .tab-tmall {
+    background-color: #c60000;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search[data-current="1"] .search-input {
+    border-color: #c60000;
+}
+
+.search[data-current="1"] .search-button {
+    background-color: #c60000;
+}
+
+.search[data-current="2"] .tab-shop {
+    background-color: #ff5400;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search[data-current="2"] .search-input {
+    border-color: #ff5400;
+}
+
+.search[data-current="2"] .search-button {
+    background-color: #ff5400;
+}
+
+
+/*
+.search[data-index="0"] .tab-baby {
+    background-color: #ff5400;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search[data-index="0"] .search-input {
+    border-color: #ff5400;
+}
+
+.search[data-index="0"] .search-button {
+    background-color: #ff5400;
+}
+
+.search[data-index="1"] .tab-tmall {
+    background-color: #c60000;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search[data-index="1"] .search-input {
+    border-color: #c60000;
+}
+
+.search[data-index="1"] .search-button {
+    background-color: #c60000;
+}
+
+.search[data-index="2"] .tab-shop {
+    background-color: #ff5400;
+    color: #fff;
+    font-weight: 700;
+}
+
+.search[data-index="2"] .search-input {
+    border-color: #ff5400;
+}
+
+.search[data-index="2"] .search-button {
+    background-color: #ff5400;
+}
+
+这段css是用于#top中的“淘宝”“天猫”“店铺”三者依然需要根据用户点击切换样式，但是不需要默认显示已点击“淘宝”的样式的,
+即父元素不需要 data-current="0"(表示默认的data-index="0")这个属性，父元素的data-index属性取决于用户点击哪个子元素*/
+
+#nav-cover {
+    background-color: #fff;
+    padding-bottom: 1px;
+}
+
+#nav {
+    width: 990px;
+    padding-left: 200px;
+    margin: 0 auto;
+    height: 34px;
+}
+
+.nav-a,
+.nav-b {
+    float: left;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 4px;
+    height: 30px;
+}
+
+#nav li {
+    float: left;
+}
+
+.nav-pipe {
+    margin-left: 6px;
+    padding-top: 2px;
+    font-weight: 400;
+    color: #ddd;
+}
+
+.nav-a li {
+    margin: 0 3px;
+    padding: 0 4px;
+    color: #f40;
+}
+
+.nav-b li {
+    margin-left: 7px;
+}
+
+.nav-a li>a {
+    color: inherit;
+}
+
+.nav-a li>a,
+.nav-b li>a {
+    padding: 0 5px;
+    line-height: 28px;
+    float: left;
+}
+
+.nav-b {
+    font-size: 14px;
+}
+
+#nav li:hover {
+    background-color: #f40;
+    border-radius: 13px;
+}
+
+#nav .nav-a li:hover a,
+#nav .nav-b li:hover a {
+    color: #fff;
+}

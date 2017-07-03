@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+</head>
+
+<body>
+    <h1>web design</h1>
+    <p>these are the things you should know.</p>
+    <ol id="linklist">
+        <li>
+            <a href="stucture.html">stucture</a>
+        </li>
+        <li>
+            <a href="">presentation</a>
+        </li>
+        <li>
+            <a href="">behavior</a>
+        </li>
+    </ol>
+    <video controls src="http://101.47.16.49/mp4files/2196000000B8418C/183.252.54.24/vmind.qqvideo.tc.qq.com/h0200hrlgns.p202.1.mp4"></video>
+    <input type="range" name="" value="">
+    <script src="scripts/addLoadEvent.js"></script>
+    <script src="scripts/insertAfter.js"></script>
+    <script src="scripts/moveElement.js"></script>
+    <script src="scripts/prepareSlideshow.js"></script>
+    <script src="scripts/player.js"></script>
+    <script>
+        document.querySelector('video').onloadeddata = function() {
+            console.log('loadeddata');
+        }
+        document.querySelector('video').onplay = function() {
+            console.log('play');
+        }
+        document.querySelector('video').onpause = function() {
+            console.log('pause');
+        }
+        document.querySelector('video').onended = function() {
+            console.log('ended');
+        }
+    </script>
+</body>
+
+</html>
