@@ -165,40 +165,22 @@ function boxConvelList1() {
 function boxConvelList2() {
     var tab = document.getElementsByClassName("box-tabs")[0];
     var tabList = tab.children;
-    var convel = document.getElementsByClassName("box-convel-list");
-    var prevIndex = 0;
-    var prevTabList = tabList[prevIndex];
-    var prevConvel = convel[prevIndex];
-    var count = 0;
+    var convel = document.getElementsByClassName("box-convel")[0];
+    var prevTab = tabList[0];
     for (var i = 0; i < tabList.length; i++) {
         (function(j) {
             tabList[j].onmouseover = function e() {
-                if (j) {
-                    prevConvel.classList.remove('show');
-                }
-                // prevConvel.classList.add("hide");
-                prevTabList.classList.remove("hovercolor");
-
-                if (j > prevIndex) {
-                    prevConvel.classList.remove("convel-list-current-rtol");
-                    prevConvel.classList.remove("convel-list-current-ltor");
-                    prevTabList = tabList[j];
-                    prevIndex = j;
-                    prevConvel = convel[prevIndex]
-                    prevConvel.classList.add("convel-list-current-rtol");
-                    count += 1;
-                } else if (j < prevIndex) {
-                    prevConvel.classList.remove("convel-list-current-rtol");
-                    prevConvel.classList.remove("convel-list-current-ltor");
-                    prevTabList = tabList[j];
-                    prevIndex = j;
-                    prevConvel = convel[prevIndex]
-                    prevConvel.classList.add("convel-list-current-ltor");
-                    count += 1;
-                }
-
-                // prevConvel.classList.remove("hide");
-                prevTabList.classList.add(("hovercolor"))
+                // var cover = convel[0];
+                prevTab.classList.remove("hovercolor");
+                prevTab = tabList[j];
+                var translateX = 0 - j * 300;
+                // console.log(translateX);
+                convel.style.transform = `translateX(${translateX}px)`;
+                convel.style.transition = `transform linear 0.2s`;
+                setTimeout(function() { //setTimeout为了防止css中若写了transition而带来的影响(通过将transition属性置空)
+                    cover.style.transition = 'none';
+                }, 200);
+                prevTab.classList.add(("hovercolor"))
             }
         })(i)
     }

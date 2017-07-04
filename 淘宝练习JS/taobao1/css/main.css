@@ -906,6 +906,9 @@
 }
 
 .box-convel {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 12000px;
     /*width: 9999px;动画animation3是以宽度来计算百分比的，如果父元素的宽度太宽就没有效果了*/
 }
 
@@ -923,8 +926,9 @@
 
 .box-convel-list {
     width: 300px;
-    float: left;
-    display: none;
+    /*float: left;*/
+    font-size: 12px;
+    display: inline-block;
     /*overflow: hidden;*/
     /*display: none;*/
 }
@@ -946,7 +950,8 @@
     color: #f40;
 }*/
 
-.box-text .box-convel .box-convel-list.show {
+
+/*.box-text .box-convel .box-convel-list.show {
     display: block;
 }
 
@@ -958,7 +963,7 @@
 .box-convel-list.convel-list-current-ltor {
     animation: animations4 0.2s ease-in;
     display: block;
-}
+}*/
 
 .box-list .box-text .box-tabs a.hovercolor {
     color: #f40;
