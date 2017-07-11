@@ -176,6 +176,7 @@ function boxConvelList2() {
                 var translateX = 0 - j * 300;
                 // console.log(translateX);
                 convel.style.transform = `translateX(${translateX}px)`;
+                // convel.style.transform = "translateX (' + translateX +' px)";
                 convel.style.transition = `transform linear 0.2s`;
                 setTimeout(function() { //setTimeout为了防止css中若写了transition而带来的影响(通过将transition属性置空)
                     cover.style.transition = 'none';
