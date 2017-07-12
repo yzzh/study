@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="./jquery.js"></script>
+</head>
+
+<body>
+
+    <img/><img/>
+
+    <button>Change colors</button>
+    <span></span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="stop">Stop here</div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <div id="notMe">
+        <p>id="notMe"</p>
+    </div>
+    <div id="myDiv">id="myDiv"</div>
+
+    <span id="foo:bar"></span>
+    <span id="foo[bar]"></span>
+    <span id="foo.bar"></span>
+
+    <div class="notMe">div class="notMe"</div>
+    <div class="myClass">div class="myClass"</div>
+    <span class="myClass my">span class="myClass"</span>
+
+    <button id="run">Run</button>
+    <div></div>
+
+
+
+
+
+
+    <script>
+        console.log(myDiv);
+        // $(document.body).css("background", "black");
+        $("<div><p>Hello</p></div>").appendTo("body");
+
+        $("<input type='checkbox'>").appendTo("body");
+
+        $("<div>", {
+            "class": "test",
+            text: "Click me!",
+            click: function() {
+                $(this).toggleClass("test");
+            }
+        }).appendTo("body");
+
+        $("<input>", {
+            type: "text",
+            val: "Test",
+            focusin: function() {
+                $(this).addClass("active");
+            },
+            focusout: function() {
+                $(this).removeClass("active");
+            }
+        }).appendTo("form");
+
+        $("img").each(function(i) {
+            this.src = "test" + i + ".jpg";
+        });
+
+        $("img").each(function() {
+            $(this).toggleClass("example");
+        });
+
+        var a = $("#myDiv");
+        console.log(a);
+
+        var b = $("#foo\\[bar\\]");
+        console.log(b);
+
+        var c = $(".myClass");
+        console.log(c);
+
+        var d = $("*");
+        console.log(d);
+
+        $("#run").click(function() {
+            $("div:not(:animated)").animate({
+                left: "+=20"
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

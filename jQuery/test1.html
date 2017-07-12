@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>test1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="./jquery.js"></script>
+</head>
+
+<body>
+    <form>
+        <label>Name:</label>
+        <input name="name" />
+        <fieldset>
+            <label>Newsletter:</label>
+            <input name="newsletter" />
+        </fieldset>
+    </form>
+    <input name="none" />
+    <input name="add" type="checkbox" checked="checked" />
+
+    <div id="content">
+        <input tabIndex="1">
+        <input tabIndex="2">
+        <select tabIndex="3">
+        <option>select menu</option>
+    </select>
+        <div tabIndex="4">
+            a div
+        </div>
+    </div>
+
+    <input type="checkbox" name="newsletter" value="Hot Fuzz" />
+    <input type="checkbox" name="newsletter" value="Cold Fusion" />
+    <input type="checkbox" name="accept" value="Evil Plans" />
+
+
+
+    <script>
+        var e = $("form + input");
+        console.log(e);
+        var f = $("form ~ input");
+        console.log(f);
+
+        var g = $("input:not(:checked)");
+        console.log(g);
+
+        var h = $(":lang(it)");
+        console.log(h);
+
+        family = {
+            father: {
+                name: 'dad',
+                age: 50,
+            },
+            mother: {
+                name: "mom",
+                age: 54,
+            },
+            sister: {
+                name: 'dong',
+                age: 24,
+            },
+            myself: {
+                name: 'yang',
+                age: 24,
+            }
+        };
+        var sum = 0;
+        $.each(family, function(key, value) {
+            console.log(key);
+            sum += value.age;
+        })
+        console.log(sum);
+
+        $("#content").delegate("*", "focus blur", function(event) {
+            var elem = $(this);
+            setTimeout(function() {
+                elem.toggleClass("focused", elem.is(":focus"));
+            }, 0);
+        });
+
+        $(":root").css("background-color", "yellow");
+
+        $("input[name!='newsletter']").attr("checked", true);
+        // $("input[name != 'newsletter'"): not("checked", true);
+    </script>
+</body>
+
+</html>

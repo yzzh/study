@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>test2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="./jquery.js"></script>
+</head>
+
+<body>
+    <style>
+        div {
+            margin: 3px;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 0px;
+            top: 30px;
+            background: green;
+            display: none;
+        }
+        
+        div.newcolor {
+            background: blue;
+        }
+        
+        span {
+            color: red;
+        }
+    </style>
+    <button id="show">Show Length of Queue</button>
+    <span></span>
+    <div></div>
+
+    <style>
+        div {
+            margin: 3px;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 0px;
+            top: 30px;
+            background: green;
+            display: none;
+        }
+        
+        div.newcolor {
+            background: blue;
+        }
+    </style>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div></div>
+
+    <style>
+        div {
+            margin: 3px;
+            width: 50px;
+            position: absolute;
+            height: 50px;
+            left: 10px;
+            top: 30px;
+            background-color: yellow;
+        }
+        
+        div.red {
+            background-color: red;
+        }
+    </style>
+
+    <button>Start</button>
+    <div></div>
+
+
+
+
+
+
+    <script>
+        $("#show").click(function() {
+            var n = $("div").queue("fx");
+            $("span").text("Queue length is: " + n.length);
+        });
+
+        function runIt() {
+            $("div").show("slow");
+            $("div").animate({
+                left: '+=200'
+            }, 2000);
+            $("div").slideToggle(1000);
+            $("div").slideToggle("fast");
+            $("div").animate({
+                left: '-=200'
+            }, 1500);
+            $("div").hide("slow");
+            $("div").show(1200);
+            $("div").slideUp("normal", runIt);
+        }
+        runIt();
+
+
+        $("#start").click(function() {
+            $("div").show("slow");
+            $("div").animate({
+                left: '+=200'
+            }, 5000);
+            $("div").queue(function() {
+                $(this).addClass("newcolor");
+                $(this).dequeue();
+            });
+            $("div").animate({
+                left: '-=200'
+            }, 1500);
+            $("div").queue(function() {
+                $(this).removeClass("newcolor");
+                $(this).dequeue();
+            });
+            $("div").slideUp();
+        });
+        $("#stop").click(function() {
+            $("div").queue("fx", []);
+            $("div").stop();
+        });
+    </script>
+
+    $("button").click(function () { $("div").animate({left:'+=200px'}, 2000); $("div").animate({top:'0px'}, 600); $("div").queue(function () { $(this).toggleClass("red"); $(this).dequeue(); }); $("div").animate({left:'10px', top:'30px'}, 700); });
+</body>
+
+</html>
