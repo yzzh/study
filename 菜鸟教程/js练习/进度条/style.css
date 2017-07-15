@@ -1,0 +1,19 @@
+#progress,
+#progress-a {
+    width: 100%;
+    background-color: #ddd;
+}
+
+#bar,
+#bar-a {
+    height: 30px;
+    background-color: #4caf50;
+    width: 1%;
+}
+
+#bar-a {
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    width: 10%;
+}

@@ -1,0 +1,36 @@
+#myInput {
+    background-image: url(https://static.runoob.com/images/mix/searchicon.png);
+    background-repeat: no-repeat;
+    background-position: 10px 12px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+}
+
+#myUL {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd;
+    /* 链接添加边框 */
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+}
+
+#myUL li a.header {
+    background-color: #e2e2e2;
+    cursor: default;
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+}
