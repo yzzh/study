@@ -12,12 +12,26 @@ function move() {
     }, 10);
 }
 
-function move1() {
+
+var btn = document.getElementById("btn");
+/*var width = 10;
+btn.onclick = setInterval(function(x) {
+
+    var bar = document.getElementById("bar-a");
+    if (width < 100) {
+        width++;
+        bar.style.width = width + "%";
+        bar.innerHTML = width + "%";
+    } else {
+        clearInterval(setInterval);
+    }
+}, 10);*/
+
+btn.onclick = function move1() {
     // var btn = document.getElementById("btn");
     var bar = document.getElementById("bar-a");
-    var progress = document.getElementById("progress-a");
     var width = 10;
-    btn.addEventListner("click", setInterval(function() {
+    setInterval(function() {
         if (width < 100) {
             width++;
             bar.style.width = width + "%";
@@ -25,8 +39,6 @@ function move1() {
         } else {
             clearInterval(setInterval);
         }
-    }, 10), false);
+    }, 10);
 
 }
-
-move1();

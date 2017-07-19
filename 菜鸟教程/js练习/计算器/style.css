@@ -1,0 +1,87 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #495678;
+    font-size: 30px;
+    margin-top: 20px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#calculator {
+    background-color: #495678;
+    box-shadow: 4px 4px #3d4a65;
+    margin: 40px auto;
+    padding: 40px 0 30px 40px;
+    width: 280px;
+}
+
+#calculator,
+.btn,
+#display {
+    border-radius: 25px;
+}
+
+#display {
+    outline: none;
+    background-color: #98d1dc;
+    color: #dededc;
+    font-size: 20px;
+    height: 47px;
+    text-align: right;
+    width: 165px;
+    padding-right: 10px;
+    margin-left: 10px;
+    box-shadow: inset 6px 6px #3facc0;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 20px;
+    height: 45px;
+    margin: 5px 0 5px 10px;
+    width: 45px;
+    outline: none;
+}
+
+.other {
+    background-color: #e3844c;
+    box-shadow: 0 5px #e76a3d;
+    color: #dededc;
+}
+
+.other:active {
+    box-shadow: 0 2px #e76a3d;
+    transform: translateY(2px);
+}
+
+.number {
+    background-color: #72778b;
+    box-shadow: 0 5px #5f6680;
+    color: #dededc;
+}
+
+.number:active {
+    box-shadow: 0 2px #5f6680;
+    transform: translateY(2px);
+}
+
+.operator {
+    background-color: #dededc;
+    box-shadow: 0 5px #bebebe;
+    color: #72778b;
+}
+
+.operator:active {
+    box-shadow: 0 2px #bebebe;
+    transform: translateY(2px);
+}
+
+#h2 {
+    font-size: 20px;
+    text-align: center;
+}

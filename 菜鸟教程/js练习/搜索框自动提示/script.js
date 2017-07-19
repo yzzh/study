@@ -1,6 +1,7 @@
 //下列函数若想变成区分大小写搜索则把每行的toUpperCase去掉即可实现
-function myFunction() {
-    var input = document.getElementById("myInput");
+var input = document.getElementById("myInput");
+
+input.onkeyup = function myFunction() {
     var filter = input.value.toUpperCase();
     var ul = document.getElementById("myUL");
     var li = ul.getElementsByTagName("li");
@@ -15,4 +16,3 @@ function myFunction() {
         }
     }
 }
-myFunction(); //这个不写也可以吗？why

@@ -14,22 +14,17 @@ function newSpan() {
 }
 newSpan();
 
-/*//函数checked()可以实现点击以后添加类checked的效果，但是无法实现再次选中li后移除类checked的效果，window.onclick也无法实现?
-function checked() {
+//函数checked()智能针对现有的li切换类checked,后面用户再添加的li无法实现此效果，除非在newLi()函数中针对新增加的li再添加点击后切换类checked的事件
+/*function checked() {
     for (var i = 0; i < li.length; i++) {
         (function(j) {
             li[j].onclick = function e() {
-                li[j].classList.add("checked");
-            }
-            window.onclick = function(event) {
-                if (event.target.tagName == "li") {
-                    event.target.classList.remove("checked");
-                }
+                li[j].classList.toggle("checked");
             }
         })(i);
     }
 }
-// checked();*/
+checked();*/
 
 //以下两个区别：ul为何在这里不能正确起作用?(现在又起作用了。。。)
 ul.addEventListener('click', function(ev) {
@@ -61,9 +56,9 @@ list.addEventListener('click', function(ev) {
 function close1() {
     for (var i = 0; i < close.length; i++) {
         close[i].onclick = function() {
-            //以下这两行有何区别?
-            // close[i].parentElement.style.display = "none";
-            this.parentNode.style.display = "none";
+            //以下这两行都可以
+            this.parentElement.style.display = "none";
+            // this.parentNode.style.display = "none";
             //上一行也可以写成以下两行
             /*var div = this.parentNode;
             div.style.display = "none";*/
@@ -80,23 +75,27 @@ add.onclick = function newLi() {
     var input = document.getElementById("input").value;
     var txt = document.createTextNode(input);
     newLi.appendChild(txt);
-    if (input === "") {
+    if (input.value === "") {
         alert("you must write something");
     } else {
         ul.appendChild(newLi);
     }
-    document.getElementById("input").value = ""; //这里为何不可以用input变量来代替？input的话添加新的li后input框的内容无法清楚，why?
+    document.getElementById("input").value = "";
+    /*这里为何不可以用input变量来代替？input的话添加新的li后input框的内容无法清除，
+       why?变量input是临时储存input输入框的属性value的变量，此处是需要对输入框的值进行更改，所以不可以直接在变量上更改，还是需要随时获取输入框的value再进行操作*/
     //创建关闭按钮
     var span = document.createElement("span");
     var txt = document.createTextNode("\u00D7");
     span.className = "close";
     span.appendChild(txt);
     newLi.appendChild(span);
-    //关闭按钮添加事件(由于close1()函数是一个申明的函数，如果newLi()函数里面不重复写一下的话就无法在这个函数里面实现关闭按钮的功能)
-    for (var i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            // close[i].parentElement.style.display = "none";
-            this.parentNode.style.display = "none";
+    //关闭按钮添加事件(由于close1()函数是一个申明的函数，如果newLi()函数里面不再写一下关闭按钮事件的话就无法在这个函数里面实现关闭按钮的功能)
+    span.onclick = function() {
+            newLi.style.display = 'none';
         }
-    }
+        //以下两行是为了实现给新增加的类切换类checked的效果（前提是现有的li使用了本文件中checked()函数）
+        // newLi.onclick = function() {
+        //     newLi.classList.toggle('checked');
+        // }
+
 }
