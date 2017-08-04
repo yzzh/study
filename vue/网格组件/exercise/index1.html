@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <template id="modal">
+        <div class="modal-wrapper">
+            <header>
+                <slot name="header">
+                    default header
+                </slot>
+            </header>
+            <main>
+                <slot name="main">
+                    default main
+                </slot>
+            </main>
+            <footer>
+                <slot name="footer">
+                    default footer
+                </slot>
+            </footer>
+            <button v-on:click="$emit('close')">ok</button>
+        </div>
+    </template>
+    <div id="example">
+        <button v-on:click="show = true">show</button>
+        <modal v-on:close="show = false" v-if='show'>
+            <h1 slot="header">
+                此为自定义标题，可以覆盖default header的默认内容，但是必须写在自定义标签内部方能生效
+            </h1>
+        </modal>
+
+    </div>
+
+
+    <script>
+        Vue.component('modal', {
+            template: "#modal"
+        })
+        new Vue({
+            el: "#example",
+            data: {
+                show: false
+            }
+        })
+    </script>
+</body>
+
+</html>

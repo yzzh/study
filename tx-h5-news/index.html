@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app"></div>
+    <template id="tpl">
+        <div>
+            <template v-for="(v, index) in list">
+                <banner :url="v.image30" :title="v.title" v-if="index === 0">
+                </banner>
+                <item2 
+                    v-else-if="v.articletype === '1' && parseInt(v.img_num, 10) >= 3"
+                    :title="v.title"
+                    :img="v.image33_l"
+                    :desc="v.src"
+                ></item2>
+                <item1
+                    v-else
+                    :title="v.title"
+                    :url="v.image32"
+                    :desc="v.src"
+                ></item1>
+            </template>
+    </div>
+    </template>
+    <template id="banner">
+        <div class="banner">
+            <p class="date">{{date}}</p>
+            <div class="banner-area">
+                <img :src="url" alt="">
+                <h3>{{title}}</h3>
+            </div>
+        </div>
+    </template>
+    <template id="item1">
+        <div class="item1">
+            <img :src="url" alt="">
+            <div class="con-area">
+                <h3>{{title}}</h3>
+                <p>{{desc}}</p>
+            </div>
+        </div>
+    </template>
+    <template id="item2">
+        <div class="item2">
+            <h2>{{title}}</h2>
+            <ul class="img-list">
+                <li v-for="index in 3"><img :src="img[index-1]" alt=""></li>
+            </ul>
+            <p>{{desc}}</p>
+        </div>
+    </template>
+    <script src="jquery.js"></script>
+    <script src="vue.js"></script>
+    <script src="moment.js"></script>
+    <script>
+        Vue.component('banner', {
+            props: {
+                url: String,
+                title: String
+            },
+            template: '#banner',
+            data: function() {
+                var date = moment().format('YYYY-MM-DD HH:mm:ss');
+                return {
+                    date: date
+                };
+            }
+        })
+        Vue.component('item1', {
+            props: {
+                url: String,
+                title: String,
+                desc: String
+            },
+            template: '#item1',
+        })
+        Vue.component('item2', {
+            props: {
+                img: Array,
+                desc: String,
+                title: String,
+            },
+            template: '#item2',
+        })
+        var vm = new Vue({
+            el: '#app',
+            template: '#tpl',
+            data: {
+                start: 0,
+                size: 10,
+                list: [],
+                loadingStatus: 0, // 0 可以加载  1  正在加载  2  加载完成   -1   无数据
+            },
+            methods: {
+                // forceFlag  强制获取数据
+                loadItemList(e, forceFlag) {
+                    var body = $('body');
+                    var scrollHeight = body[0].scrollHeight;
+                    var height = $('html').height();
+                    if (forceFlag || this.loadingStatus === 0 && scrollHeight <= height + body.scrollTop() + 100) {
+                        this.loadingStatus = 1;
+                        $.ajax({
+                                url: 'http://xy.zgzinfo.com/tx/',
+                                type: 'post',
+                                data: {
+                                    size: this.size,
+                                    start: this.start,
+                                    channel_code: 'kb_news_sports',
+                                    refer: '100000257'
+                                },
+                                dataType: 'json',
+                            })
+                            .then(res => {
+                                var list = res.data.list.map(v => v.content);
+                                this.list = [...this.list, ...list];
+                                if (!list.length && this.start === 0) {
+                                    this.loadingStatus = -1;
+                                    return;
+                                }
+                                if (this.size > list.length) {
+                                    this.loadingStatus = 2;
+                                    return;
+                                }
+                                if (this.size === list.length) {
+                                    this.loadingStatus = 0;
+                                    this.start += list.length;
+                                }
+                            })
+                    }
+                }
+            },
+            created() {
+                this.loadItemList(1, true);
+                $(document).on('scroll', this.loadItemList);
+            },
+            beforeDestroy() {
+                $(document).off('scroll', this.loadItemList);
+            }
+        });
+    </script>
+</body>
+
+</html>

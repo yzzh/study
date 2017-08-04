@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-if="EXPIRED">
+            EXPIRED
+        </div>
+        <div v-else>
+            {{d}}天{{h}}小时{{m}}分钟{{s}}秒
+        </div>
+        <button @click="showFn">show</button>
+        <test v-if="show"></test>
+    </div>
+
+
+    <script>
+        Vue.component('sub1', {
+            template: '<p>sub</p>'
+        }); //此组件中的自定义标签被test自定义标签组件使用，所以他是后者的子组件，后者为父组件，父子组件为相对关系
+
+        Vue.component('test', {
+                template: '<div><p @click="a += 1">1212{{a}}</p><sub1></sub1></div>',
+                beforeCreate() {
+                    console.log('beforeCreate');
+                },
+                created() {
+                    console.log('created');
+                },
+                beforeMount() {
+                    console.log('beforeMount');
+                },
+                mounted() {
+                    console.log('mounted');
+                },
+                beforeDestroy() {
+                    console.log('beforeDestroy');
+                },
+                destroyed() {
+                    console.log('destroyed');
+                },
+                data() {
+                    console.log('data');
+                    return {
+                        a: 1
+                    };
+                },
+                beforeUpdate() {
+                    console.log('beforeUpdate');
+                },
+                updated() {
+                    console.log('Updated');
+                },
+                methods: {
+
+                },
+                props: {
+
+                }
+            })
+            // start app
+        new Vue({
+            el: '#app',
+            data: {
+                show: false,
+                EXPIRED: false,
+                d: '',
+                h: '',
+                m: '',
+                s: ''
+            },
+            // template: '<p>1</p>',
+            methods: {
+                showFn() {
+                    this.show = !this.show;
+                },
+                a() {
+                    var long = new Date("Jan 5, 2028 15:37:25").getTime();
+                    var that = this;
+                    var x = setInterval(function() {
+                        var short = new Date().getTime();
+                        var distance = long - short;
+                        var d = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var h = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+                        var m = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+                        var s = Math.floor(distance % (1000 * 60) / 1000);
+                        that.d = d;
+                        that.h = h;
+                        that.m = m;
+                        that.s = s;
+                        if (distance <= 0) {
+                            clearInterval(x);
+                            that.EXPIRED = true;
+                        }
+                    }, 1000);
+                }
+            },
+            created() {
+                this.a();
+            }
+        })
+    </script>
+</body>
+
+</html>

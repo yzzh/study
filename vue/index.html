@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>vue</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <div id="app-2">
+        <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </span>
+    </div>
+    <div id="app-3">
+        <p v-if="seen">现在你看到我了</p>
+    </div>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+    <div id="app-5">
+        <p v-html>{{ message }}</p>
+        <button v-on:click="reverseMessage">逆转消息</button>
+    </div>
+    <div id="app-6">
+        <p v-once>{{ message }}</p>
+        <input v-model="message">
+    </div>
+    <div id="example">
+        <p>oringinal message:"{{message}}"</p>
+        <p>computed reversed message:"{{reversedMessage}}"</p>
+    </div>
+    <div id="demo">{{ fullName }}</div>
+
+    <div id="ap">
+        <input v-model="parentMsg"><br>
+        <child v-bind:message="parentMsg"></child>
+    </div>
+
+    <div id="example-1">
+        <p>{{total}}</p>
+        <button-counter v-on:increment="incrementTotal"></button-counter>
+        <button-counter v-on:increment="incrementTotal"></button-counter>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+    <div id="example-4">
+        <button @click="show = !show">
+    Toggle
+  </button>
+        <transition v-on:before-enter="beforeEnter" v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
+            <p v-if="show">
+                Demo
+            </p>
+        </transition>
+    </div>
+
+
+
+    <script>
+        new Vue({
+            el: '#example-4',
+            data: {
+                show: false
+            },
+            methods: {
+                beforeEnter: function(el) {
+                    el.style.opacity = 0
+                    el.style.transformOrigin = 'left'
+                },
+                //第一次点击时 元素出现时的动画
+                enter: function(el, done) {
+                    Velocity(el, {
+                        opacity: 1,
+                        fontSize: '1.4em'
+                    }, {
+                        duration: 300
+                    })
+                    Velocity(el, {
+                        fontSize: '1em'
+                    }, {
+                        complete: done
+                    })
+                },
+                //第二次点击时元素消失时的动画
+                leave: function(el, done) {
+                    //消失第一步：由平行于屏幕底部旋转至45deg,同时x轴平移15px
+                    Velocity(el, {
+                            translateX: '15px',
+                            rotateZ: '45deg'
+                        }, {
+                            duration: 1000
+                        })
+                        //消失第二步，由rotateZ 45deg变为rotateZ 100deg，此动作进行三次(loop)，模拟摆钟的效果
+                    Velocity(el, {
+                            rotateZ: '100deg'
+                        }, {
+                            loop: 3
+                        })
+                        //消失第三步，沿ratateZ 45deg方向，并向x,y轴平移300px滑动离开
+                    Velocity(el, {
+                        rotateZ: '45deg',
+                        translateY: '300px',
+                        translateX: '300px',
+                        opacity: 0
+                    }, {
+                        complete: done
+                    })
+                }
+            }
+        })
+
+        Vue.component("button-counter", {
+            template: "<button v-on:click='increment'>{{counter}}</button>",
+            data: function() {
+                return {
+                    counter: 0
+                }
+            }
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hellovue!'
+            }
+        })
+        var app2 = new Vue({
+            el: '#app-2',
+            data: {
+                message: '页面加载于 ' + new Date()
+            }
+        })
+        var app3 = new Vue({
+            el: '#app-3',
+            data: {
+                seen: false
+            }
+        })
+        var app4 = new Vue({
+            el: '#app-4',
+            data: {
+                todos: [{
+                    text: '学习 JavaScript'
+                }, {
+                    text: '学习 Vue'
+                }, {
+                    text: '整个牛项目'
+                }]
+            }
+        })
+        var app5 = new Vue({
+            el: '#app-5',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            methods: {
+                reverseMessage: function() {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+        var app6 = new Vue({
+            el: '#app-6',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+        var vm = new Vue({
+                el: "#example",
+                data: {
+                    message: "hello"
+                },
+                computed: {
+                    reversedMessage: function() {
+                        return this.message.split("").reverse().join("")
+                    }
+                },
+            })
+            // var vm = new Vue({
+            //     el: '#demo',
+            //     data: {
+            //         firstName: 'Foo',
+            //         lastName: 'Bar',
+            //         fullName: 'Foo Bar'
+            //     },
+            //     watch: {
+            //         firstName: function(val) {
+            //             this.fullName = val + ' ' + this.lastName
+            //         },
+            //         lastName: function(val) {
+            //             this.fullName = this.firstName + ' ' + val
+            //         }
+            //     }
+            // })
+        var vm = new Vue({
+            el: '#demo',
+            data: {
+                firstName: 'Foo',
+                lastName: 'Bar'
+            },
+            computed: {
+                fullName: function() {
+                    return this.firstName + ' ' + this.lastName
+                }
+            }
+        })
+
+        Vue.component("child", {
+            props: ["message"],
+            template: "<span>{{message}}</span>"
+        })
+        new Vue({
+            el: "#ap",
+            data: {
+                parentMsg: "fuzujian"
+            }
+        })
+    </script>
+</body>
+
+</html>
